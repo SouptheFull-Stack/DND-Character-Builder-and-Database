@@ -16,11 +16,26 @@ Character.init(
     age: {
       type: DATATYPES.INTEGER,
     },
-    race: {
-      type: DATATYPES.STRING,
+    user_id: {
+      type: DATATYPES.INTEGER,
+      reference: {
+        model: 'user',
+        key: 'id',
+      }
+    },
+    race_id: {
+      type: DATATYPES.INTEGER,
+      reference: {
+        model: 'race',
+        key: 'id',
+      }
     },
     class: {
       type: DATATYPES.STRING,
+      reference: {
+        model: 'class',
+        key: 'id',
+      }
     },
   },
   {
