@@ -31,7 +31,7 @@ Character.init(
       }
     },
     class_id: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       reference: {
         model: 'class',
         key: 'id',
