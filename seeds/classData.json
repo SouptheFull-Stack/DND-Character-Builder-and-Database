@@ -2,7 +2,7 @@
     {
         "name": "Barbarian",
         "subclass": ["Ancestral Guardian", "Battlerager", "Beast", "Berserker", "Giant", "Juggernaut", "Storm Herald", "Totem Warrior", "Wild Magic", "Zealot"],
-        "description": "A tall human tribesman strides through a blizzard, draped in fur and hefting his axe. He laughs as he charges toward the frost giant who dared poach his people's elk herd."
+        "description": "A tall human tribesman strides through a blizzard, draped in fur and hefting his axe."
     },
     {
         "name": "Bard",
@@ -17,7 +17,7 @@
     {
         "name": "Druid",
         "subclass": ["Dreams", "Land", "Moon", "Shepard", "Spores", "Stars", "Wildfire"],
-        "description": "Holding high a gnarled staff wreathed with holly"
+        "description": "Holding high a gnarled staff wreathed with holly, an elf summons the fury"
     },
     {   
         "name": "Fighter",
@@ -27,17 +27,17 @@
     {   
         "name": "Monk",
         "subclass": ["Ascendant Dragon", "Astral Self", "Drunken Master", "Four Elements", "Kensei", "Long Death", "Mercy", "Open Hand", "Shadow", "Sun Soul"],
-        "description": "Her fists a blur as they deflect an incoming hail of arrows."
+        "description": "Her fists a blur as they deflect an incoming hail of arrows"
     },
     {   
         "name": "Paladin",
         "subclass": ["Ancients", "Conquest", "Crown", "Devotion", "Glory", "Oathbreaker", "Redemption", "Vengeance", "Watchers"],
-        "description": "Clad in plate armor that gleams in the sunlight despite the dust and grime of long travel."
+        "description": "Clad in plate armor that gleams in the sunlight despite the dust and grime of long travel"
     },
     {   
         "name": "Ranger",
         "subclass": ["Beast Master", "Drakewarden", "Fey Wanderer", "Gloom Stalker", "Horizon Walker", "Hunter", "Monster Slayer", "Swarmkeeper"],
-        "description": "Rough and wild looking, a human stalks alone through the shadows of trees, hunting the orcs he knows are planning a raid on a nearby farm."
+        "description": "Rough and wild looking, a human stalks alone through the shadows of trees"
     },
     {   
         "name": "Rogue",
@@ -52,12 +52,19 @@
     {   
         "name": "Warlock",
         "subclass": ["Archfey", "Celestial", "Fathomless", "Fiend", "Genie", "Great Old One", "Hexblade", "Undead", "Undying"],
+        "description": "With a pseudodragon curled on his shoulder, a young elf in golden robes smiles warmly"
+    },
+
+    {   
+        "name": "Warlock",
+        "subclass": ["Archfey", "Celestial", "Fathomless", "Fiend", "Genie", "Great Old One", "Hexblade", "Undead", "Undying"],
         "description": "With a pseudodragon curled on his shoulder, a young elf in golden robes smiles warmly."
+
     },
     {   
         "name": "Wizard",
         "subclass": ["Abjuration", "Bladesinging", "Conjuration", "Divination", "Enchantment", "Evocation", "Illusion", "Necromancy", "Scribes", "Transmutation", "War"],
-        "description": "Clad in the silver robes that denote her station."
+        "description": "Clad in the silver robes that denote her station"
     }
 ]
 
