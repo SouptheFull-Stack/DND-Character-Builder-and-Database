@@ -1,36 +1,39 @@
-// importing the needed packages/modules
-const path = require("path");
-const express = require("express");
-const exphbs = require("express-handlebars");
-const routes = require("./controllers");
-const sequelize = require("./config/connection");
+const path = require('path');
+const express = require('express');
+const session = require('express-session');
+const exphbs = require('express-handlebars');
+const routes = require('./controllers');
 const helpers = require('./utils/helpers');
 
-// add pg as well ? ^ any others i'm missing
+const sequelize = require('./config/connection');
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
-// setting up express methods
 const app = express();
-
-// declare handlebars helpers
-const hbs = exphbs.create({ helpers });
-
-// setting up PORT number for server
 const PORT = process.env.PORT || 3001;
 
-// setting up the handlebars template engine for use
-app.engine("handlebars", hbs.engine);
-app.set("view engine", "handlebars");
+const hbs = exphbs.create({ helpers });
 
-// setting up the middleware for working with json data
+const sess = {
+  secret: 'Super secret secret',
+  cookie: {},
+  resave: false,
+  saveUninitialized: true,
+  store: new SequelizeStore({
+    db: sequelize
+  })
+};
+
+app.use(session(sess));
+
+app.engine('handlebars', hbs.engine);
+app.set('view engine', 'handlebars');
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-// serve static files from the 'public' folder to the user
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, 'public')));
 
-// ???
 app.use(routes);
 
-// Setting up sequelize module to listen for server requests nad link to the models
 sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log("Now listening"));
+  app.listen(PORT, () => console.log('Now listening'));
 });

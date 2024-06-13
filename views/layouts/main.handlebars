@@ -1,1 +1,65 @@
-{{!-- insert the body of the html elements here, this will be the entirety of the HTML itself, not the webpage content --}}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="asses/CSS/styles.css" />
+    <link rel="stylesheet" href="asses/CSS/from.css" />
+    <title>{{title}}</title>
+  </head>
+  <body>
+    <Header>
+      <nav class="nav-bar">
+        <div class="nav-logo">
+          <img src="" alt="logo DnD" />
+        </div>
+        <div class="nav-menu">
+          <ul>
+            <li href="#" class="Home">Home</li>
+            <li href="#" class="Characters">Characters</li>
+            <li href="#" class="Histories">Histories</li>
+            <li href="#" class="More Info">More Info</li>
+          </ul>
+        </div>
+        <div class="nav button">
+          <button class="btn" id="logIn-btn">Sign In</button>
+          <button class="btn" id="register-btn">Sign Up</button>
+        </div>
+      </nav>
+    </Header>
+    <div>
+      {{{body}}}
+    </div>
+
+    <footer class="footer">
+      <div class="group-1">
+        <div class="box">
+          <figure>
+            <a href="#">
+              <img src="" alt="logo DnD" />
+            </a>
+          </figure>
+        </div>
+        <div class="box">
+          <h2>About us</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Voluptatem enim architecto maiores minus nihil sint quam blanditiis?
+            Obcaecati tempora suscipit reiciendis nisi fugiat ut, doloremque
+            saepe? Ut modi cum similique!</p>
+        </div>
+        <div class="box">
+          <h2>Contact us</h2>
+          <div class="social-media">
+            <a href="" class="fa-brands fa-facebook"></a>
+            <a href="" class="fa-brands fa-instagram"></a>
+            <a href="" class="fa-brands fa-twitter"></a>
+            <a href="" class="fa-brands fa-youtube"></a>
+          </div>
+        </div>
+      </div>
+      <div>
+        <small>&copy; 2024 <b>Group 2</b> - all rights reserved</small>
+      </div>
+
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<div class="form-box">
+
+  <div class="login-container" id="login">
+    <div>
+      <span>Don't have an account?
+        <a href="#" onclick="register()">Sing Up</a></span>
+      <header>Login</header>
+    </div>
+    <div class="two-forms">
+      <div class="input-box">
+        <input
+          type="text"
+          class="input-field"
+          placeholder="Username or Email"
+        />
+      </div>
+      <div class="input-box">
+        <input type="text" class="input-field" placeholder="Password" />
+      </div>
+      <div class="input-box">
+        <input type="submit" class="submit" value="Sign in" />
+      </div>
+    </div>
+  </div>
+  <div class="register-container" id="register">
+
+    {{! sign in form }}
+    <div>
+      <span>have an account? <a href="#" onclick="login()">Login</a></span>
+      <header>Sing up</header>
+    </div>
+    <div class="two-forms">
+      <div class="input-box">
+        <input type="text" class="input-field" placeholder="FirstName" />
+      </div>
+      <div class="input-box">
+        <input type="text" class="input-field" placeholder="LastName" />
+      </div>
+      <div class="input-box">
+        <input type="text" class="input-field" placeholder="Password" />
+      </div>
+      <div class="input-box">
+        <input type="submit" class="submit" value="Register" />
+      </div>
+    </div>
+  </div>
+
+</div>
