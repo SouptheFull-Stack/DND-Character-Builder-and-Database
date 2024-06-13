@@ -52,12 +52,6 @@
     {   
         "name": "Warlock",
         "subclass": ["Archfey", "Celestial", "Fathomless", "Fiend", "Genie", "Great Old One", "Hexblade", "Undead", "Undying"],
-        "description": "With a pseudodragon curled on his shoulder, a young elf in golden robes smiles warmly"
-    },
-
-    {   
-        "name": "Warlock",
-        "subclass": ["Archfey", "Celestial", "Fathomless", "Fiend", "Genie", "Great Old One", "Hexblade", "Undead", "Undying"],
         "description": "With a pseudodragon curled on his shoulder, a young elf in golden robes smiles warmly."
 
     },
