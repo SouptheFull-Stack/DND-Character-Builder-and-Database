@@ -1,6 +1,6 @@
 //? Database model for storing user information
 
-const { Model } = require('sequelize');
+const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
