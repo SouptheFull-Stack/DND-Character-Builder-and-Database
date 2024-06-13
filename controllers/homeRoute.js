@@ -15,11 +15,11 @@ router.get('/login', withAuth, async (req, res) => {
       res.redirect('/profile');
       return;
     }
-    
+
     res.render('login');
 });
 
-router.get('/profile', (req, res) => {
+router.get('/profile', withAuth, async (req, res) => {
   if (!req.session.logged_in) {
     res.redirect('/login');
     return;
@@ -28,7 +28,7 @@ router.get('/profile', (req, res) => {
   res.render('profile');
 });
 
-router.get('/info', (req, res) => {
+router.get('/info', withAuth, async (req, res) => {
   if (!req.session.logged_in) {
     res.redirect('/login');
     return;
@@ -37,7 +37,7 @@ router.get('/info', (req, res) => {
   res.render('info');
 });
 
-router.get('/create', (req, res) => {
+router.get('/create', withAuth, async (req, res) => {
   if (!req.session.logged_in) {
     res.redirect('/login');
     return;
@@ -46,7 +46,7 @@ router.get('/create', (req, res) => {
   res.render('create');
 });
 
-router.get('/logout', (req, res) => {
+router.get('/logout', (res) => {
 
   res.render('homepage');
 });
