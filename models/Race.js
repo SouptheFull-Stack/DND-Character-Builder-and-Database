@@ -25,12 +25,12 @@ Race.init(
     speed: {
       type: DataTypes.STRING,
     },
-    special_abilities: {
-      type: DataTypes.ARRAY(DataTypes.STRING),
-    },
-    languages: {
-      type: DataTypes.ARRAY(DataTypes.STRING),
-    },
+    // special_abilities: {
+    //   type: DataTypes.ARRAY(DataTypes.STRING),
+    // },
+    // languages: {
+    //   type: DataTypes.ARRAY(DataTypes.STRING),
+    // },
     stats: {
       type: DataTypes.STRING,
     },
