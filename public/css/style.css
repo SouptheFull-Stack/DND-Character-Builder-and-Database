@@ -1,0 +1,39 @@
+:root {
+  --white: #FFFFFF;
+  --accent: #FF4155;
+  --dark: #212529;
+}
+
+.navlogo {
+  height: 7em;
+}
+
+footer a {
+  color: inherit;
+}
+
+.sedan-sc-regular {
+  font-family: "Sedan SC", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+}
+
+.brand {
+  background-color: var(--dark);
+  color: #FF4155;
+}
+
+.content-box {
+  border-radius: 1em;
+  box-shadow: 0em 0em 0.5em 0.5em var(--accent);
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  width: 12em;
+}
+
+.footer-body {
+  display: flex;
+  align-items: center;
+}
