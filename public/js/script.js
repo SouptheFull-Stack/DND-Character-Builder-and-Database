@@ -1,5 +1,5 @@
 const logInForm = document.getElementById('login-form');
-const regForm = document.getElementById('register-form');
+const regForm = document.getElementById('signup-form');
 const switchToRegBtn = document.getElementById('switch-to-reg');
 const switchToLogBtn = document.getElementById('switch-to-log');
 

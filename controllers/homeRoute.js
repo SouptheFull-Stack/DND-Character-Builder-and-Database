@@ -3,7 +3,9 @@ const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
-    res.render('homepage');
+    res.render('homepage', {
+      loggedIn: req.session.logged_in
+    });
 
   } catch (err) {
     res.status(500).json(err);
@@ -25,7 +27,9 @@ router.get('/profile', withAuth, async (req, res) => {
     return;
   }
   
-  res.render('profile');
+  res.render('profile', {
+    loggedIn: req.session.logged_in
+  });
 });
 
 router.get('/info', withAuth, async (req, res) => {
@@ -34,7 +38,9 @@ router.get('/info', withAuth, async (req, res) => {
     return;
   }
 
-  res.render('info');
+  res.render('info', {
+    loggedIn: req.session.logged_in
+  });
 });
 
 router.get('/create', withAuth, async (req, res) => {
@@ -43,12 +49,16 @@ router.get('/create', withAuth, async (req, res) => {
     return;
   }
 
-  res.render('create');
+  res.render('create', {
+    loggedIn: req.session.logged_in
+  });
 });
 
 router.get('/logout', (res) => {
 
-  res.render('homepage');
+  res.render('homepage', {
+    loggedIn: req.session.logged_in
+  });
 });
 
 module.exports = router;
