@@ -1,25 +1,46 @@
 <main>
   <div class="races">
-    <h2>Races</h2>
-    <div href="#">
+    <button class="race-button">Races</button>
+    <div class="race-dropdown">
       <ul class="dropDown-Races">
-        {{#each race as |race|}}
-          <li>{{race.race}}</li>
+        {{#each class as |class|}}
+          <li><button class="class-option" data-class="{{class.class}}">{{class.class}}</button></li>
+        {{/each}}
+      </ul>
+      <ul class="dropDown-subClass">
+        {{#each class as |class|}}
+          {{#each class.subclass as |subclass|}}
+            <li>{{subclass}}</li>
+          {{/each}}
+        {{/each}}
+      </ul>
+      <ul class="dropDown-description">
+        {{#each class as |class|}}
+          <li>{{class.description}}</li>
         {{/each}}
       </ul>
     </div>
   </div>
-  <div class="races">
-    <h2>Races</h2>
-    <div href="#">
-      <ul class="dropDown-Races">
-        {{#each race as |race|}}
-          <li>{{race.race}}</li>
+<div class="races">
+  <button class="race-button">Races</button>
+  <div class="race-dropdown">
+    <ul class="dropDown-Races">
+      {{#each race as |race|}}
+        <li><button class="race-option" data-race="{{race.race}}">{{race.race}}</button></li>
+      {{/each}}
+    </ul>
+    <ul class="dropDown-subRaces">
+      {{#each race as |race|}}
+        {{#each race.subRaces as |subRace|}}
+          <li>{{subRace}}</li>
         {{/each}}
-      </ul>
-    </div>
+      {{/each}}
+    </ul>
+    <ul class="dropDown-description">
+      {{#each race as |race|}}
+        <li>{{race.description}}</li>
+      {{/each}}
+    </ul>
   </div>
-  <div class="all">
-    <p>Hola</p>
-  </div>
+</div>
 </main>
