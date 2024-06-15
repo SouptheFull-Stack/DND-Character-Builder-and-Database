@@ -1,16 +1,21 @@
 // initialise express
-const router = require('express').Router();
+const router = require("express").Router();
 // retrieve models
-const { Character } = require('../../models');
+const { Character, User } = require("../../models");
+const withAuth = require("../../utils/auth");
 
 // create a new character
-router.post('/', async (req, res) => {
+router.get("/", withAuth, async (req, res) => {
   try {
-    const dbCharacterData = await Character.create();
-    res.status(200).json(dbCharacterData);
-  } catch (error) {
-    console.log(error);
-    res.status(500).json(error);
+    const user = await User.findbyPk(req.user.id);
+    const userCharsAll = await Character.findAll({
+      where: { userID: user.id },
+    });
+    res.render("userCharsAll", { userCharsAll });
+    res.status(200).json(userCharsAll);
+  } catch (err) {
+    console.err(err);
+    res.status(500).send("Error retrieving characters!");
   }
 });
 
