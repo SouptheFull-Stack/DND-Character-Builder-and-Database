@@ -46,7 +46,7 @@ Race.init(
   {
     sequelize,
     modelName: "race",
-    timestamps: false,
+    timestamps: true,
   }
 );
 
