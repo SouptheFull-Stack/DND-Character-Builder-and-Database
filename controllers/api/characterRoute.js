@@ -6,7 +6,13 @@ const { Character } = require("../../models");
 // create a character
 router.post("/", async (req, res) => {
   try {
-    const newCharacter = await Character.create(req.body);
+    const newCharacter = await Character.create({
+      name: req.body.charName,
+      age: req.body.charAge,
+      user_id: req.body.charUser,
+      class_id: req.body.charClas,
+      race_id: req.body.charRace,
+    });
     res.status(200).json(newCharacter);
   } catch (err) {
     console.error(err);
