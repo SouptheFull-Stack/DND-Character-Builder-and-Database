@@ -16,6 +16,9 @@ footer a {
   font-family: "Sedan SC", serif;
   font-weight: 400;
   font-style: normal;
+}
+
+.centre {
   text-align: center;
 }
 
@@ -36,4 +39,12 @@ footer a {
 .footer-body {
   display: flex;
   align-items: center;
+}
+
+form {
+  max-width: 600px;
+}
+
+.is-hidden {
+  display: none;
 }
