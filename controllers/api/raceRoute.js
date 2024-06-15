@@ -1,6 +1,16 @@
 const router = require("express").Router();
 const { Race } = require("../../models");
-// const withAuth = require("../../utils/auth");
+
+// CREATE NEW RACE
+router.post("/", async (req, res) => {
+  try {
+    const newRace = await Race.post(req.body);
+    res.status(200).json(newRace);
+  } catch (err) {
+    console.error(err);
+    res.status(500).send("Error creating!");
+  }
+});
 
 // GET ALL RACES
 router.get("/", async (req, res) => {
@@ -24,8 +34,9 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-// GET RACE BY NAME ?? NOT WORKING, REQUEST COMES BACK NULL HAVE TO DEBUG
-router.get("/:name", async (req, res) => {
+// GET RACE BY NAME
+// add in converter of lowercase to correct Case/Capitals
+router.get("/name/:name", async (req, res) => {
   try {
     const nameRace = await Race.findOne({
       where: {
@@ -39,15 +50,32 @@ router.get("/:name", async (req, res) => {
   }
 });
 
-// AM WORKING ON NOW, JUST GOING TO MERGE TO MAIN FOR EVERYONE TO UPDATE OTHER CHANGES
-router.post("/", async (req, res) => {
+// UPDATE RACE
+router.put("/:id", async (req, res) => {
   try {
-  } catch (err) {}
+    const updateRace = await Race.update(req.body, {
+      where: {
+        id: req.params.id,
+      },
+    });
+    res.status(200).json(updateRace);
+  } catch (err) {
+    res.status(400).json({ message: "Something went wrong", detail: err });
+  }
 });
 
-router.put("/", async (req, res) => {
+// DELETE RACE
+router.delete("/:id", async (req, res) => {
   try {
-  } catch (err) {}
+    const deleteRace = await Race.destroy({
+      where: {
+        id: req.params.id,
+      },
+    });
+    res.status(200).json(deleteRace);
+  } catch (err) {
+    res.status(400).json({ message: "Something went wrong", detail: err });
+  }
 });
 
 module.exports = router;
