@@ -19,12 +19,20 @@ router.get('/login', async (req, res) => {
       res.redirect('/profile');
       return;
     }
-
+    
     res.render('login');
 });
 
 router.get('/profile', withAuth, async (req, res) => {
+
+  const userChars = await Character.findAll({
+    where: { user_id: req.session.user_id },
+  })
+ 
+  const characters = userChars.map((char) => char.get({plain: true}));
+
   res.render('profile', {
+    characters, 
     loggedIn: req.session.logged_in,
     userId: req.session.user_id,
   });
