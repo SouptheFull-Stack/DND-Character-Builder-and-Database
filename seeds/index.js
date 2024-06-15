@@ -35,6 +35,8 @@ const seedDatabase = async () => {
     returning: true,
   });
 
+  console.log("Seeding successful!");
+
   process.exit(0);
 };
 

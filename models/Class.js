@@ -12,9 +12,11 @@ Class.init(
     },
     subclass: {
       type: DataTypes.ARRAY(DataTypes.STRING),
+      allowNull: false,
     },
     description: {
       type: DataTypes.STRING,
+      allowNull: false,
     },
   },
   {
