@@ -28,8 +28,8 @@ router.get('/profile', withAuth, async (req, res) => {
   const userChars = await Character.findAll({
     where: { user_id: req.session.user_id },
   })
-
-  const characters = userChars.map((el) => el.get({plain: true}));
+ 
+  const characters = userChars.map((char) => char.get({plain: true}));
 
   res.render('profile', {
     characters, 

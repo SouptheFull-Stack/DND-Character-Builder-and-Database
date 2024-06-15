@@ -3,22 +3,15 @@
     <h1>Welcome, {{$user.name}}!</h1>
   </div>
   <div class="wrapper">
+    <button type='submit' class='btn' value='Create'>Create New Character</button>
     <div class="Characters">
       <h2> Your characters:</h2>
       <ul class="dropDown-Characters">
-        {{#each users as |user|}}
-          <li>{{characters.user}}</li>
+        {{#each characters as |character|}}
+          <li>{{character.name}}</li>
         {{/each}}
       </ul>
     </div>
-    <div class="Histories">
-      <h2> Your histories:</h2>
-      <ul class="dropDown-Histories">
-        {{#each historyData as |user|}}
-          <li>{{user.user}}</li>
-        {{/each}}
-      </ul>
-    </div> 
     <div class="Information">
       <button href="../views/info.handlebars">More Info</button>
     </div> 
