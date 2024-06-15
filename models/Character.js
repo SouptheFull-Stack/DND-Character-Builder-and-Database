@@ -18,31 +18,30 @@ Character.init(
     },
     user_id: {
       type: DataTypes.INTEGER,
-      reference: {
-        model: 'user',
-        key: 'id',
-      }
+      references: {
+        model: "user",
+        key: "id",
+      },
     },
     race_id: {
       type: DataTypes.INTEGER,
-      reference: {
-        model: 'race',
-        key: 'id',
-      }
+      references: {
+        model: "race",
+        key: "id",
+      },
     },
     class_id: {
       type: DataTypes.INTEGER,
-      reference: {
-        model: 'class',
-        key: 'id',
-      }
+      references: {
+        model: "class",
+        key: "id",
+      },
     },
   },
   {
     sequelize,
-    timestamps: false,
-    freezeTableName: true,
     modelName: "character",
+    timestamps: true,
   }
 );
 

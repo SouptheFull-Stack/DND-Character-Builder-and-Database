@@ -1,9 +1,9 @@
 const router = require("express").Router();
 const { Race } = require("../../models");
-const withAuth = require("../../utils/auth");
+// const withAuth = require("../../utils/auth");
 
 // GET ALL RACES
-router.get("/", withAuth, async (req, res) => {
+router.get("/", async (req, res) => {
   try {
     const allRaces = await Race.findAll();
     res.status(200).json(allRaces);
@@ -14,7 +14,7 @@ router.get("/", withAuth, async (req, res) => {
 });
 
 // GET RACE BY ID
-router.get("/", async (req, res) => {
+router.get("/:id", async (req, res) => {
   try {
     const idRace = await Race.findByPk(req.params.id);
     res.status(200).json(idRace);

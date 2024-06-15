@@ -1,4 +1,3 @@
-// insert exports or smth to link to models??!
 // retrieve the models that were created
 const User = require("./User");
 const Character = require("./Character");
