@@ -28,9 +28,16 @@ router.get("/profile", withAuth, async (req, res) => {
     where: { user_id: req.session.user_id },
   });
 
+  const userDB = await User.findOne({
+    where: { id: req.session.user_id},
+  });
+
+  const user = userDB.get({plain: true});
+
   const characters = userChars.map((char) => char.get({ plain: true }));
 
   res.render("profile", {
+    user,
     characters,
     loggedIn: req.session.logged_in,
     userId: req.session.user_id,
