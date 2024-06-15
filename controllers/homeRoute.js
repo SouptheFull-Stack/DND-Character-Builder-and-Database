@@ -25,11 +25,8 @@ router.get("/login", async (req, res) => {
 router.get("/profile", withAuth, async (req, res) => {
   const userChars = await Character.findAll({
     include: [{ model: Race }, { model: Class }],
-    include: [{ model: Race }, { model: Class }],
     where: { user_id: req.session.user_id },
   });
-
-  const characters = userChars.map((char) => char.get({ plain: true }));
 
   const characters = userChars.map((char) => char.get({ plain: true }));
 
