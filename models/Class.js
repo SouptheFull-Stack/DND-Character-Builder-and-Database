@@ -10,11 +10,13 @@ Class.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    // subclass: {
-    //   type: DataTypes.ARRAY(DataTypes.STRING),
-    // },
+    subclass: {
+      type: DataTypes.ARRAY(DataTypes.STRING),
+      allowNull: false,
+    },
     description: {
       type: DataTypes.STRING,
+      allowNull: false,
     },
   },
   {

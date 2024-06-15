@@ -12,27 +12,35 @@ Race.init(
     },
     name: {
       type: DataTypes.STRING,
+      allowNull: false,
     },
     extra: {
       type: DataTypes.STRING,
+      allowNull: true,
     },
     age: {
       type: DataTypes.STRING,
+      allowNull: false,
     },
     size: {
       type: DataTypes.STRING,
+      allowNull: false,
     },
     speed: {
       type: DataTypes.STRING,
+      allowNull: false,
     },
-    // special_abilities: {
-    //   type: DataTypes.ARRAY(DataTypes.STRING),
-    // },
-    // languages: {
-    //   type: DataTypes.ARRAY(DataTypes.STRING),
-    // },
+    special_abilities: {
+      type: DataTypes.ARRAY(DataTypes.STRING),
+      allowNull: false,
+    },
+    languages: {
+      type: DataTypes.ARRAY(DataTypes.STRING),
+      allowNull: false,
+    },
     stats: {
       type: DataTypes.STRING,
+      allowNull: false,
     },
   },
   {

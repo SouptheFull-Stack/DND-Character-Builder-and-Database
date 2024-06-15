@@ -5,7 +5,7 @@
         "age": "Dwarves mature at the same rate as humans.",
         "size": "Medium: Dwarves stand between 4 and 5 feet tall and average about 150 pounds. Your size is Medium.",
         "speed": "Speed: 25 ft. Your speed is not reduced by wearing heavy armor.",
-        "special_abilities": "Tool Proficiency.",
+        "special_abilities": ["Tool Proficiency.", "Hehe", "Haha"],
         "languages": ["Common", "Dwarvish"],
         "stats": "Con +2"
     }
