@@ -12,6 +12,9 @@ const classData = require("./classData.json");
 const Race = require("../models/Race");
 const raceData = require("./raceData.json");
 
+const Character = require("../models/Character");
+const characterData = require("./characterData.json");
+
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
 
@@ -31,6 +34,11 @@ const seedDatabase = async () => {
   });
 
   await Race.bulkCreate(raceData, {
+    individualHooks: true,
+    returning: true,
+  });
+
+  await Character.bulkCreate(characterData, {
     individualHooks: true,
     returning: true,
   });

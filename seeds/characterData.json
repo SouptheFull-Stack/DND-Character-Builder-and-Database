@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Brock",
+    "age": 35,
+    "user_id": 1,
+    "race_id": 1,
+    "class_id": 6
+  },
+  {
+    "name": "Misty",
+    "age": 28,
+    "user_id": 1,
+    "race_id": 1,
+    "class_id": 9
+  },
+  {
+    "name": "Ash",
+    "age": 35,
+    "user_id": 2,
+    "race_id": 1,
+    "class_id": 1
+  },
+  {
+    "name": "Wisteria",
+    "age": 555,
+    "user_id": 1,
+    "race_id": 1,
+    "class_id": 4
+  },
+  {
+    "name": "Blessing",
+    "age": 16,
+    "user_id": 3,
+    "race_id": 1,
+    "class_id": 3
+  }
+]
