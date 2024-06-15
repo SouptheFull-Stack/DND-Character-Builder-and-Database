@@ -17,9 +17,7 @@ router.post("/", async (req, res) => {
 // Find all characters
 router.get("/", async (req, res) => {
   try {
-    const allCharacters = await Character.findAll({
-      include: [{ model: Race }, { model: Class }],
-    });
+    const allCharacters = await Character.findAll();
     res.status(200).json(allCharacters);
   } catch (err) {
     console.error(err);
@@ -31,9 +29,7 @@ router.get("/", async (req, res) => {
 router.get("/:id", async (req, res) => {
   try {
     // matching user input id to database id of character
-    const idCharacter = await Character.findByPk(req.params.id, {
-      include: [{ model: Race }, { model: Class }],
-    });
+    const idCharacter = await Character.findByPk(req.params.id);
     res.status(200).json(idCharacter);
   } catch (err) {
     console.error(err);
@@ -45,7 +41,6 @@ router.get("/:id", async (req, res) => {
 router.get("/name/:name", async (req, res) => {
   try {
     const nameCharacter = await Character.findOne({
-      include: [{ model: Race }, { model: Class }],
       // matching user input name to database name of character
       where: {
         name: req.params.name,
@@ -62,7 +57,6 @@ router.get("/name/:name", async (req, res) => {
 router.put("/:id", async (req, res) => {
   try {
     const updateCharacter = await Character.update(req.body, {
-      include: [{ model: Race }, { model: Class }],
       where: {
         id: req.params.id,
       },
