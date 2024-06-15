@@ -38,10 +38,22 @@ router.get('/info', withAuth, async (req, res) => {
 });
 
 router.get('/profile/create', withAuth, async (req, res) => {
-  res.render('create', {
-    loggedIn: req.session.logged_in,
-    userId: req.session.user_id,
-  });
+  try {
+    const dbClassData = await Class.findAll();
+    const dbRaceData = await Race.findAll();
+    // Convert the objects into a plainer object where it is much easier to read the attributes
+    const classses = dbClassData.map((classs) => classs.get({ plain: true }));
+    const races = dbRaceData.map((race) => race.get({ plain: true }));
+    res.render('create', {
+      classses,
+      races,
+      loggedIn: req.session.logged_in,
+      userId: req.session.user_id,
+    });
+  } catch (error) {
+    console.log(error);
+    res.status(500).json(error);
+  }
 });
 
 module.exports = router;
