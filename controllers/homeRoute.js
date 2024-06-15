@@ -1,10 +1,12 @@
 const router = require('express').Router();
 const withAuth = require('../utils/auth');
+const { Class, User, Race, Character } = require('../models');
 
 router.get('/', async (req, res) => {
   try {
     res.render('homepage', {
-      loggedIn: req.session.logged_in
+      loggedIn: req.session.logged_in,
+      userId: req.session.user_id,
     });
 
   } catch (err) {
@@ -22,42 +24,23 @@ router.get('/login', async (req, res) => {
 });
 
 router.get('/profile', withAuth, async (req, res) => {
-  if (!req.session.logged_in) {
-    res.redirect('/login');
-    return;
-  }
-  
   res.render('profile', {
-    loggedIn: req.session.logged_in
+    loggedIn: req.session.logged_in,
+    userId: req.session.user_id,
   });
 });
 
 router.get('/info', withAuth, async (req, res) => {
-  if (!req.session.logged_in) {
-    res.redirect('/login');
-    return;
-  }
-
   res.render('info', {
-    loggedIn: req.session.logged_in
+    loggedIn: req.session.logged_in,
+    userId: req.session.user_id,
   });
 });
 
-router.get('/create', withAuth, async (req, res) => {
-  if (!req.session.logged_in) {
-    res.redirect('/login');
-    return;
-  }
-
+router.get('/profile/create', withAuth, async (req, res) => {
   res.render('create', {
-    loggedIn: req.session.logged_in
-  });
-});
-
-router.get('/logout', (res) => {
-
-  res.render('homepage', {
-    loggedIn: req.session.logged_in
+    loggedIn: req.session.logged_in,
+    userId: req.session.user_id,
   });
 });
 

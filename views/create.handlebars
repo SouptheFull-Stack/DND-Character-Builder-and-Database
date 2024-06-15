@@ -1,4 +1,23 @@
-<main>
+<h2 class="sedan-sc-regular centre">Create a Character</h2>
+<form>
+  <div class="form-group m-3">
+    <label for="char-name">Name</label>
+    <input type="text" class="form-control" id="char-name" placeholder="Enter a name for your character">
+  </div>
+
+  <div class="form-group m-3">
+    <label for="char-race">Race</label>
+    <select name="class-list" id="char-class" aria-placeholder="Select a race">
+      {{#each}}
+      {{/each}}
+    </select>
+  </div>
+</form>
+
+
+
+
+
   <div class="races">
     <button class="race-button">Races</button>
     <div class="race-dropdown">
