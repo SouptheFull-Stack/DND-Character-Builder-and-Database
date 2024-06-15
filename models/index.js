@@ -17,8 +17,7 @@ Character.belongsTo(User, {
 // character to race => one to many
 Race.hasMany(Character, {
   foreignKey: "race_id",
-  onDelete: "SET NULL",
-  onUpdate: "CASCADE",
+  onDelete: "CASCADE",
 });
 
 Character.belongsTo(Race, {
@@ -28,8 +27,7 @@ Character.belongsTo(Race, {
 // character to class => one to many
 Class.hasMany(Character, {
   foreignKey: "class_id",
-  onDelete: "SET NULL",
-  onUpdate: "CASCADE",
+  onDelete: "CASCADE",
 });
 
 Character.belongsTo(Class, {
