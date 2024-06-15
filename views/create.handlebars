@@ -1,46 +1,36 @@
-<main>
-  <div class="races">
-    <button class="race-button">Races</button>
-    <div class="race-dropdown">
-      <ul class="dropDown-Races">
-        {{#each class as |class|}}
-          <li><button class="class-option" data-class="{{class.class}}">{{class.class}}</button></li>
-        {{/each}}
-      </ul>
-      <ul class="dropDown-subClass">
-        {{#each class as |class|}}
-          {{#each class.subclass as |subclass|}}
-            <li>{{subclass}}</li>
-          {{/each}}
-        {{/each}}
-      </ul>
-      <ul class="dropDown-description">
-        {{#each class as |class|}}
-          <li>{{class.description}}</li>
-        {{/each}}
-      </ul>
-    </div>
+<h2 class='sedan-sc-regular centre'>Create a Character</h2>
+<form class='mx-auto' data-userId="{{userId}}">
+  <div class='form-group m-3'>
+    <label for='char-name'>Name</label>
+    <input type='text' class='form-control' id='char-name' placeholder='Enter a name for your character' />
   </div>
-<div class="races">
-  <button class="race-button">Races</button>
-  <div class="race-dropdown">
-    <ul class="dropDown-Races">
-      {{#each race as |race|}}
-        <li><button class="race-option" data-race="{{race.race}}">{{race.race}}</button></li>
-      {{/each}}
-    </ul>
-    <ul class="dropDown-subRaces">
-      {{#each race as |race|}}
-        {{#each race.subRaces as |subRace|}}
-          <li>{{subRace}}</li>
-        {{/each}}
-      {{/each}}
-    </ul>
-    <ul class="dropDown-description">
-      {{#each race as |race|}}
-        <li>{{race.description}}</li>
-      {{/each}}
-    </ul>
+
+  <div class='form-group m-3'>
+    <label for='char-age'>Age</label>
+    <input type='number' class='form-control' id='char-age' placeholder='Enter an age for your character' />
   </div>
-</div>
-</main>
+
+  <div class='form-group m-3'>
+    <label for='char-class'>Class</label>
+    <select name='class-list' class='form-select' id='char-class'>
+      <option value=''>Select a class...</option>
+      {{#each classses as |class|}}
+        <option value='{{id}}'>{{name}}</option>
+      {{/each}}
+    </select>
+  </div>
+
+  <div class='form-group m-3'>
+    <label for='char-race'>Race</label>
+    <select name='race-list' class='form-select' id='char-race'>
+      <option value=''>Select a race...</option>
+      {{#each races as |race|}}
+        <option value='{{id}}'>{{name}}</option>
+      {{/each}}
+    </select>
+  </div>
+
+  <div class='form-group m-3'>
+    <button type='submit' class='btn btn-secondary form-control'>Create</button>
+  </div>
+</form>
