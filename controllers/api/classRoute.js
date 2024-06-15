@@ -1,8 +1,18 @@
 const router = require("express").Router();
 const { Class } = require("../../models");
-// const withAuth = require("../../utils/auth"); removing to debug error and figure out what problem is
 
-// removed withAuth middleware to test error
+// CREATE NEW CLASS
+router.post("/", async (req, res) => {
+  try {
+    const newClass = await Class.create(req.body);
+    res.status(200).json(newClass);
+  } catch (err) {
+    console.error(err);
+    res.status(500).send("Error creating!");
+  }
+});
+
+// GET ALL CLASSES
 router.get("/", async (req, res) => {
   try {
     const allClasses = await Class.findAll();
@@ -13,7 +23,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-// GET ONE CLASS BY PRIMARY KEY
+// GET ONE CLASS BY ID
 router.get("/:id", async (req, res) => {
   try {
     const idClass = await Class.findByPk(req.params.id);
@@ -25,19 +35,19 @@ router.get("/:id", async (req, res) => {
 });
 
 // GET ONE CLASS BY NAME?!?!
-// router.get("/:name", async (req, res) => {
-//   try {
-//     const nameClass = await Class.findOne({
-//       where: {
-//         name: req.params.name,
-//       },
-//     });
-//     res.status(200).json(nameClass);
-//   } catch (err) {
-//     console.error(err);
-//     res.status(500).send("Error retrieving class!");
-//   }
-// });
+router.get("/name/:name", async (req, res) => {
+  try {
+    const nameClass = await Class.findOne({
+      where: {
+        name: req.params.name,
+      },
+    });
+    res.status(200).json(nameClass);
+  } catch (err) {
+    console.error(err);
+    res.status(500).send("Error retrieving class!");
+  }
+});
 
 // GET ONE CLASS BY NAME?!?! SECOND METHOD OF SYNTAX
 // router.get("/:name", async (req, res) => {
@@ -58,17 +68,7 @@ router.get("/:id", async (req, res) => {
 //   }
 // });
 
-// AM WORKING ON NOW, JUST GOING TO MERGE TO MAIN FOR EVERYONE TO UPDATE OTHER CHANGES
-router.post("/", async (req, res) => {
-  try {
-    const newClass = await Class.create(req.body);
-    res.status(200).json(newClass);
-  } catch (err) {
-    console.error(err);
-    res.status(500).send("Error creating!");
-  }
-});
-
+// UPDATE CLASS
 router.put("/:id", async (req, res) => {
   try {
     const updateClass = await Class.update({
@@ -79,7 +79,21 @@ router.put("/:id", async (req, res) => {
     res.status(200).json(updateClass);
   } catch (err) {
     console.error(err);
-    res.status(500).send("Error updating!");
+    res.status(400).json({ message: "Something went wrong", detail: err });
+  }
+});
+
+// DELETE CLASS
+router.delete("/:id", async (req, res) => {
+  try {
+    const deleteClass = await Class.destroy({
+      where: {
+        id: req.params.id,
+      },
+    });
+    res.status(200).json(deleteClass);
+  } catch (err) {
+    res.status(400).json({ message: "Something went wrong", detail: err });
   }
 });
 
