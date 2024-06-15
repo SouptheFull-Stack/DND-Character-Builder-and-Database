@@ -1,7 +1,21 @@
 :root {
-  --white: #FFFFFF;
-  --accent: #FF4155;
+  --white: #ffffff;
+  --accent: #ff4155;
   --dark: #212529;
+}
+
+@font-face {
+  font-family: "dungeon";
+  src: url("./dungeon.TTF");
+}
+
+#charNames {
+  font-family: "dungeon";
+  font-size: 6em;
+}
+
+.card {
+  display: inline-block;
 }
 
 .navlogo {
@@ -24,7 +38,7 @@ footer a {
 
 .brand {
   background-color: var(--dark);
-  color: #FF4155;
+  color: #ff4155;
 }
 
 .content-box {
