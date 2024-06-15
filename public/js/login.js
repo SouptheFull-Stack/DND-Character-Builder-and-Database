@@ -19,7 +19,8 @@ const loginFormHandler = async (event) => {
     if (response.ok) {
       document.location.replace('/');
     } else {
-      alert('Failed to log in.');
+      const errorMessage = await response.json();
+      alert(`Failed to log in: ${errorMessage.message || 'Unknown error'}`);
     }
   }
 };
@@ -46,7 +47,7 @@ const signupFormHandler = async (event) => {
     if (response.ok) {
       document.location.replace('/');
     } else {
-      alert('Failed to sign up.');
+      alert(`Failed to sign up.`);
     }
   }
 };
@@ -54,3 +55,23 @@ const signupFormHandler = async (event) => {
 // add event listeners to both forms
 document.querySelector('#login-form').addEventListener('submit', loginFormHandler);
 document.querySelector('#signup-form').addEventListener('submit', signupFormHandler);
+
+// switching between login and register
+const logInForm = document.getElementById('login-form');
+const regForm = document.getElementById('signup-form');
+const switchToRegBtn = document.getElementById('switch-to-reg');
+const switchToLogBtn = document.getElementById('switch-to-log');
+
+function switchLogReg(event) {
+  event.preventDefault();
+  if (logInForm.classList.contains('is-hidden')) {
+    logInForm.classList.remove('is-hidden');
+    regForm.classList.add('is-hidden');
+  } else {
+    logInForm.classList.add('is-hidden');
+    regForm.classList.remove('is-hidden');
+  }
+}
+
+switchToLogBtn.addEventListener('click', switchLogReg);
+switchToRegBtn.addEventListener('click', switchLogReg);
