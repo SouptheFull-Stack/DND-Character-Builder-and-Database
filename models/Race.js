@@ -7,6 +7,7 @@ Race.init(
   {
     id: {
       type: DataTypes.INTEGER,
+      allowNull: false,
       primaryKey: true,
       autoIncrement: true,
     },
@@ -45,8 +46,10 @@ Race.init(
   },
   {
     sequelize,
-    modelName: "race",
     timestamps: true,
+    freezeTableName: true,
+    underscored: true,
+    modelName: "race",
   }
 );
 

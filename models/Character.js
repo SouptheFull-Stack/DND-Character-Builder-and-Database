@@ -7,14 +7,17 @@ Character.init(
   {
     id: {
       type: DataTypes.INTEGER,
+      allowNull: false,
       primaryKey: true,
       autoIncrement: true,
     },
     name: {
       type: DataTypes.STRING,
+      allowNull: false,
     },
     age: {
       type: DataTypes.INTEGER,
+      allowNull: true,
     },
     user_id: {
       type: DataTypes.INTEGER,
@@ -40,8 +43,10 @@ Character.init(
   },
   {
     sequelize,
+    timestamps: false,
+    freezeTableName: true,
+    underscored: true,
     modelName: "character",
-    timestamps: true,
   }
 );
 

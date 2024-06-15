@@ -25,8 +25,10 @@ Class.init(
   },
   {
     sequelize,
-    modelName: "class",
     timestamps: true,
+    freezeTableName: true,
+    underscored: true,
+    modelName: "class",
   }
 );
 
