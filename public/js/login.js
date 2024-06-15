@@ -75,3 +75,4 @@ function switchLogReg(event) {
 
 switchToLogBtn.addEventListener('click', switchLogReg);
 switchToRegBtn.addEventListener('click', switchLogReg);
+

@@ -10,6 +10,10 @@ Class.init(
       primaryKey: true,
       autoIncrement: true,
     },
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     subclass: {
       type: DataTypes.ARRAY(DataTypes.STRING),
       allowNull: false,
@@ -22,7 +26,7 @@ Class.init(
   {
     sequelize,
     modelName: "class",
-    timestamps: false,
+    timestamps: true,
   }
 );
 
