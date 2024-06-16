@@ -15,11 +15,11 @@ Race.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    extra: {
-      type: DataTypes.STRING,
-      allowNull: true,
-    },
     age: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+    },
+    stats: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -32,15 +32,15 @@ Race.init(
       allowNull: false,
     },
     special_abilities: {
-      type: DataTypes.ARRAY(DataTypes.STRING),
-      allowNull: false,
+      type: DataTypes.ARRAY(DataTypes.TEXT),
+      allowNull: true,
+    },
+    extra: {
+      type: DataTypes.ARRAY(DataTypes.TEXT),
+      allowNull: true,
     },
     languages: {
-      type: DataTypes.ARRAY(DataTypes.STRING),
-      allowNull: false,
-    },
-    stats: {
-      type: DataTypes.STRING,
+      type: DataTypes.ARRAY(DataTypes.TEXT),
       allowNull: false,
     },
   },

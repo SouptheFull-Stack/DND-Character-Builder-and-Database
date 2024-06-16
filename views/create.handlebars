@@ -13,10 +13,18 @@
   <div class='form-group m-3'>
     <label for='char-class'>Class</label>
     <select name='class-list' class='form-select' id='char-class'>
-      <option value=''>Select a class...</option>
+      <option value='' disabled selected>Select a class...</option>
       {{#each classses as |class|}}
         <option value='{{id}}'>{{name}}</option>
       {{/each}}
+    </select>
+  </div>
+
+  <div class="form-group m-3">
+    <label for="char-subclass">Subclass</label> 
+      <select name="subclass-list" class="form-select" id="char-subclass">
+        <option value="" disabled selected>Select a subclass...</option>
+        {{!-- right now we can't add subclasses via handlebar render() because the options are based on the selected class --}}
     </select>
   </div>
 
