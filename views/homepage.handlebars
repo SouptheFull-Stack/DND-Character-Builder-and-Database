@@ -1,14 +1,46 @@
-{{!-- Put the main homepage html here and insert whatever other handlebars we have  --}}
-<div class="Home-Page">
-    <h1 class="sedan-sc-regular">
-  WANT TO PLAY
-    </h1>
-    <button href="../views/login.handlebars" class="btn btn-dark">Play Now</button>
-</div>
-<div>
-    <ul class="section">
-        <li href="../views/login.handlebars" class="categories">Create New Character</li>
-        <li href="../views/info.handlebars" class="categories">More Info</li>
-        <li href="#" class="categories">Create New Character</li>
-    </ul>
+<div class="homepage-body">
+    {{!-- Put the main homepage html here and insert whatever other handlebars we have --}}
+    <div class="home-page">
+        <section class="d-flex justify-content-evenly align-items-center mt-5 mb-5">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="/images/h6.jpg" alt="" class="flip-img">
+                    </div>
+                    <div class="flip-card-back">
+                        <p>information...</p>
+                    </div>
+                </div>
+                <div class="mt-5">
+                    <h4 class="text-center">How to Start</h1>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="/images/h2.jpg" alt="" class="flip-img">
+                    </div>
+                    <div class="flip-card-back">
+                        <a href="/characters/create"><button class="btn btn-secondary">+ Create New Character</button></a>
+                    </div>
+                </div>
+                <div class="mt-5">
+                    <h4 class="text-center">Create A New Characrter</h1>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="/images/h5.jpg" alt="" class="flip-img">
+                    </div>
+                    <div class="flip-card-back">
+                        <p>dice roller...</p>
+                    </div>
+                </div>
+                <div class="mt-5">
+                    <h4 class="mt-1 text-center">Roll A Die or Two</h1>
+                </div>
+            </div>
+        </section>
+    </div>
 </div>
