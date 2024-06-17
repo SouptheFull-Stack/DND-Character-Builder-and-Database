@@ -30,6 +30,18 @@ router.get("/characters", withAuth, async (req, res) => {
     where: { user_id: req.session.user_id },
   });
 
+  const userDB = await User.findOne({
+    where: { id: req.session.user_id },
+  });
+
+  const user = userDB.get({ plain: true });
+
+  const userDB = await User.findOne({
+    where: { id: req.session.user_id },
+  });
+
+  const user = userDB.get({ plain: true });
+
   // serialize the data
   const characters = userChars.map((char) => char.get({ plain: true }));
 
