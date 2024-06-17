@@ -1,0 +1,50 @@
+e  /* This part of the code is for text of the info Handlebar */
+.info-text {
+    display: none;
+  }
+
+  .info-text.show {
+    display: block;
+  }
+  /* This part of the code is for the drop downs of the create Handlebar */
+.dropdown-button {
+    background-color: #4CAF50;
+    color: #ffffff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .dropdown-button:hover {
+    background-color: #3e8e41;
+  }
+
+  .dropdown-menu {
+    position: relative;
+    display: none;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown-menu li {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-menu li:hover {
+    background-color: #f1f1f1;
+  }
+
+  .Characters, .Histories {
+    position: relative;
+    display: inline-block;
+  }
+
+  .Characters:hover .dropdown-menu, .Histories:hover .dropdown-menu {
+    display: block;
+  }
