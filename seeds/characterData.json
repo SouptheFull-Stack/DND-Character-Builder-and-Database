@@ -2,6 +2,7 @@
   {
     "name": "Brock",
     "age": 35,
+    "alignment_id": 3,
     "user_id": 1,
     "race_id": 1,
     "class_id": 6
@@ -9,6 +10,7 @@
   {
     "name": "Wisteria",
     "age": 555,
+    "alignment_id": 5,
     "user_id": 1,
     "race_id": 1,
     "class_id": 4
@@ -16,6 +18,7 @@
   {
     "name": "Misty",
     "age": 28,
+    "alignment_id": 2,
     "user_id": 1,
     "race_id": 1,
     "class_id": 9
@@ -23,6 +26,7 @@
   {
     "name": "E",
     "age": 60,
+    "alignment_id": 7,
     "user_id": 1,
     "race_id": 2,
     "class_id": 2
@@ -30,6 +34,7 @@
   {
     "name": "Ash",
     "age": 35,
+    "alignment_id": 1,
     "user_id": 2,
     "race_id": 1,
     "class_id": 1
@@ -37,13 +42,15 @@
   {
     "name": "Zeltara",
     "age": 31,
+    "alignment_id": 4,
     "user_id": 2,
     "race_id": 2,
     "class_id": 10
   },
   {
-  "name": "Dumbo",
+    "name": "Dumbo",
     "age": 1,
+    "alignment_id": 9,
     "user_id": 2,
     "race_id": 1,
     "class_id": 4
@@ -51,6 +58,7 @@
   {
     "name": "Blessing",
     "age": 16,
+    "alignment_id": 7,
     "user_id": 3,
     "race_id": 1,
     "class_id": 3
@@ -58,6 +66,7 @@
   {
     "name": "F",
     "age": 487,
+    "alignment_id": 6,
     "user_id": 3,
     "race_id": 1,
     "class_id": 8

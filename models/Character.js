@@ -19,6 +19,13 @@ Character.init(
       type: DataTypes.INTEGER,
       allowNull: true,
     },
+    alignment_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "alignment",
+        key: "id",
+      },
+    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {

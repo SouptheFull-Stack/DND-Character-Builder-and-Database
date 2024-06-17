@@ -5,7 +5,11 @@
 }
 
 .background {
-  height: 4em;
+  height: 8em;
+}
+
+main {
+  height: 8em;
 }
 
 @font-face {
@@ -34,7 +38,7 @@ body {
   background-size: auto;
   /* background-position: center; */
   background-repeat: no-repeat;
-  height: 100vh; /* Full height */
+  height: 90em; /* Full height */
   /* display: flex;
   align-items: center;
   justify-content: center;

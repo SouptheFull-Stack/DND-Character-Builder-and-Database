@@ -10,6 +10,16 @@
     <input type='number' class='form-control' id='char-age' placeholder='Enter an age for your character' />
   </div>
 
+ <div class='form-group m-3'>
+    <label for='char-alignment'>Alignment</label>
+    <select name='alignment-list' class='form-select' id='char-alignment'>
+      <option value='' disabled selected>Select an alignment...</option>
+      {{#each alignments as |alignment|}}
+        <option value='{{id}}'>{{name}}</option>
+      {{/each}}
+    </select>
+  </div>
+
   <div class='form-group m-3'>
     <label for='char-class'>Class</label>
     <select name='class-list' class='form-select' id='char-class'>
