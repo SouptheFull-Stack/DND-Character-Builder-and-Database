@@ -30,12 +30,6 @@ router.get("/characters", withAuth, async (req, res) => {
     where: { user_id: req.session.user_id },
   });
 
-  const userDB = await User.findOne({
-    where: { id: req.session.user_id },
-  });
-
-  const user = userDB.get({ plain: true });
-
   // serialize the data
   const characters = userChars.map((char) => char.get({ plain: true }));
 
@@ -74,13 +68,6 @@ router.get("/characters/characterInfo/:name", withAuth, async (req, res) => {
   // declaring what we want to link to the handlebars for rendering on the html
   res.render("character", {
     characterSingle,
-    loggedIn: req.session.logged_in,
-    userId: req.session.user_id,
-  });
-});
-
-router.get("/info", withAuth, async (req, res) => {
-  res.render("info", {
     loggedIn: req.session.logged_in,
     userId: req.session.user_id,
   });

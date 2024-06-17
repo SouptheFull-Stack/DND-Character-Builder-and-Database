@@ -87,10 +87,24 @@ h1 {
   height: 100%; /* Ensure card takes full height */
 }
 
-.navlogo {
-  height: 7em;
+.navbar {
+  padding-left: 100px;
+  padding-right: 100px;
 }
 
+.navlogo {
+  width: 100px;
+  height: 100px;
+}
+.navbar-nav {
+  justify-content: space-between;
+}
+
+.navbar-nav .nav-link {
+  font-size: 20px;
+  width: 100%;
+  display: block;
+}
 footer a {
   color: inherit;
 }
@@ -119,8 +133,12 @@ footer a {
   width: 12em;
 }
 
+footer{
+    bottom: 0;
+    width: 100%;
+}
 .footer-body {
-  display: flex;
+  display: inline-block;
   align-items: center;
 }
 
