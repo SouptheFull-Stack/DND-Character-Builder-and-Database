@@ -9,9 +9,9 @@ const {
   Alignment,
 } = require("../models");
 
-router.get("/", async (req, res) => {
+router.get('/', async (req, res) => {
   try {
-    res.render("homepage", {
+    res.render('homepage', {
       loggedIn: req.session.logged_in,
       userId: req.session.user_id,
     });
@@ -20,13 +20,13 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.get("/login", async (req, res) => {
+router.get('/login', async (req, res) => {
   if (req.session.logged_in) {
-    res.redirect("/profile");
+    res.redirect('/profile');
     return;
   }
 
-  res.render("login");
+  res.render('login');
 });
 
 // WRITING RENDER REQUEST FOR LOGGED IN -> CHARACTERS
@@ -42,12 +42,12 @@ router.get("/characters", withAuth, async (req, res) => {
 
   // getting the logged in user's name
   const loggedInUser = await User.findByPk(req.session.user_id, {
-    attributes: ["name"],
+    attributes: ['name'],
   });
 
   console.log(characters);
   // declaring what we want to link to the handlebars for rendering on the html
-  res.render("characters", {
+  res.render('characters', {
     characters,
     loggedIn: req.session.logged_in,
     userId: req.session.user_id,
@@ -72,28 +72,28 @@ router.get("/characters/characterInfo/:name", withAuth, async (req, res) => {
 
   // if user puts wrong name in url path, error handle
   if (!userCharOne) {
-    return res.status(404).send("Character not found!");
+    return res.status(404).send('Character not found!');
   }
 
   // serialize the data
   const characterSingle = userCharOne.get({ plain: true });
 
   // declaring what we want to link to the handlebars for rendering on the html
-  res.render("character", {
+  res.render('character', {
     characterSingle,
     loggedIn: req.session.logged_in,
     userId: req.session.user_id,
   });
 });
 
-router.get("/characters/create", withAuth, async (req, res) => {
+router.get('/characters/create', withAuth, async (req, res) => {
   try {
     const dbClassData = await Class.findAll();
     const dbRaceData = await Race.findAll();
     // Convert the objects into a plainer object where it is much easier to read the attributes
     const classses = dbClassData.map((classs) => classs.get({ plain: true }));
     const races = dbRaceData.map((race) => race.get({ plain: true }));
-    res.render("create", {
+    res.render('create', {
       classses,
       races,
       loggedIn: req.session.logged_in,
@@ -102,6 +102,18 @@ router.get("/characters/create", withAuth, async (req, res) => {
   } catch (error) {
     console.log(error);
     res.status(500).json(error);
+  }
+});
+
+// dice page
+router.get('/dice', async (req, res) => {
+  try {
+    res.render('dice', {
+      loggedIn: req.session.logged_in,
+      userId: req.session.user_id,
+    });
+  } catch (err) {
+    res.status(500).json(err);
   }
 });
 

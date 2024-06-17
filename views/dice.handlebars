@@ -1,0 +1,43 @@
+<div class="wholepage">
+  <div class='container text-center'>
+    <div class='row align-items-start'>
+  
+      <div class='col-lg-6 dice my-3'>
+        <h2 class='sedan-sc-regular'>Choose your dice</h2>
+        {{! dice-selection }}
+        <div class='row g-3 mb-3 d-flex justify-content-center align-items-center'>
+          <div class='col-auto'>
+            <label for='dice-select'>Choose a die: </label>
+          </div>
+          <div class='col-auto'>
+            <select class='form-select' id='dice-select'>
+              <option value='4'>D4</option>
+              <option value='6'>D6</option>
+              <option value='8'>D8</option>
+              <option value='10'>D10</option>
+              <option value='20'>D20</option>
+            </select>
+          </div>
+          <div class='col-auto'>
+            <button class='btn btn-dark' id='add-die'>Add Die</button>
+          </div>
+  
+          <div id="dice-list"></div>
+          <div>
+            <button class="btn btn-dark" id="roll-all">Roll All Dice</button>
+          </div>
+        </div>
+      </div>
+  
+      <div class='col-lg-1'></div>
+  
+      <div class='col-lg-5 dice my-3'>
+        <h2 class='sedan-sc-regular'>Roll Summary</h2>
+        <div id="log"></div>
+      </div>
+  
+    </div>
+  </div>
+  
+  <script src="/js/dice.js"></script>
+</div>
