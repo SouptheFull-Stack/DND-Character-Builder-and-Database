@@ -4,6 +4,7 @@ const Character = require("./Character");
 const Class = require("./Class");
 const Race = require("./Race");
 const Subclass = require("./Subclass");
+const Alignment = require("./Alignment");
 
 // user to character => one to many
 User.hasMany(Character, {
@@ -35,6 +36,16 @@ Character.belongsTo(Class, {
   foreignKey: "class_id",
 });
 
+// many to one (character has one alignment, alignments have a lot of characters)
+Alignment.hasMany(Character, {
+  foreignKey: "alignment_id",
+  onDelete: "CASCADE",
+});
+
+Character.belongsTo(Alignment, {
+  foreignKey: "alignment_id",
+});
+
 // class to subclass => one to many
 Class.hasMany(Subclass, {
   foreignKey: "class_id",
@@ -45,7 +56,7 @@ Subclass.belongsTo(Class, {
   foreignKey: "class_id",
 });
 
-module.exports = { User, Character, Class, Race, Subclass };
+module.exports = { User, Character, Class, Race, Subclass, Alignment };
 
 // I HATE DOING THE EXPORTING PLZ SOMEONE ELSE DO IT - Mitra
 // No worries Mitra - Mimi

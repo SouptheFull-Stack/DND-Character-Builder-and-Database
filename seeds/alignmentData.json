@@ -1,0 +1,42 @@
+[
+    {
+        "name": "Unaligned",
+        "description": "Unaligned creatures lack the mental capacity to make philosophical judgements, and therefore don't have an alignment. Such creatures include beasts and unintelligent undead. While these creatures may still exhibit alignment-like traits (squirrels dilligently collect and bury nuts; dogs might act sympathetically toward a sad or injured humanoid), these behaviors are considered less about moral judgement than they are about conditioning, and unaligned creatures lack a capacity for self-reflection which would allow them to examine the moral implications of their thoughts and behaviors."
+    },
+    {
+        "name": "Lawful Good",
+        "description": "Lawful Good creatures act how a “good person” is expected to act. They follow rules, respect legitimate authority, and treat others with kindness, honor, and respect. Lawful Good has long been considered the alignment of idealistic heroes. Paladins were locked into lawful-good alignment until late in 3rd edition, and paladins have long been a beacon of moral certitude. However, characters who are lawful good are frequently seen as morally rigid and stubborn, so the alignment is often derided as 'lawful stupid'."
+    },
+    {
+        "name": "Neutral Good",
+        "description": "Neutral Good creatures do their best to do what they consider “good”, but don't cling to rules or stricture so much as Lawful Good creatures. A Neutral Good creature might still obey the law or society's expectations most of the time, but they are not rigidly bound by them, and they view doing the right thing as more valuable than obeying some strict doctrine."
+    },
+    {
+        "name": "Chaotic Good",
+        "description": "Chaotic Good creatures do what they believe to be right with little regard for the opinions of others. They are guided by their own sense of good and evil rather than the prevailing opinions of society, and they do not feel bound by rules, laws, or other creatures' expectations of behavior."
+    },
+    {
+        "name": "Lawful Neutral",
+        "description": "Lawful Neutral act in accordance with the law, tradition, or with some code of behavior. While this code can often be external (the law, a religious tradition, etc.), it can also be self-determined."
+    },
+    {
+        "name": "True Neutral",
+        "description": "True Neutral creatures do what seems like the best option in any given situation. These creatures might lack strong moral convictions, they might be indecisive, or they might simply be unopinionated. Such creatures typically act based upon their momentary needs and desires rather than based on a moral philosophy. Perhaps the hardest alignment to play, Neutral implies that a character either can't, won't, or hasn't performed enough self-reflection to align themselves anywhere else within the Alignment system. In a party of characters who are usually not also Neutral (even if alignment is selected at random), it's difficult to remain Neutral while your party is murder-hoboing or leading a divine crusade."
+    },
+    {
+        "name": "Chaotic Neutral",
+        "description": "Chaotic Neutral creatures follow their whims, valuing their own freedom and self-interest above other concerns. Such creatures dislike being ordered to do things, and pay no regard for rules or other creatures' expectations. And, while they are not always selfish to the point of harming others, they feel no compulsion to help other creatures in need."
+    },
+    {
+        "name": "Lawful Evil",
+        "description": "Lawful Evil creatures act within a code of behavior, but are otherwise self-centered. They are often tyrants, or would be if they could, seeking to use their code of behavior to advance their own interests."
+    },
+    {
+        "name": "Neutral Evil",
+        "description": "Neutral Evil creatures are self-interested, and do whatever they can get away with to advance their own interests. They might follow rules if it serves them, but they do not feel bound to do so. At the same time, they aren't so unpredictable as Chaotic Evil creatures."
+    },
+    {
+        "name": "Chaotic Evil",
+        "description": "Chaotic Evil creatures are motivated by arbitrary and often malicious whims. They are typically greedy and selfish, and are often violent. They give no thought to the wants or needs of other creatures, and pay no heed to rules or expectations. Such creatures will typically only bow to authority when threatened."
+    }
+]

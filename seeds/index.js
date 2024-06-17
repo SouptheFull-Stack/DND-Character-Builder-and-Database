@@ -15,6 +15,9 @@ const characterData = require("./characterData.json");
 const Subclass = require("../models/Subclass");
 const subclassData = require("./subclassData.json");
 
+const Alignment = require("../models/Alignment");
+const alignmentData = require("./alignmentData.json");
+
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
 
@@ -23,7 +26,17 @@ const seedDatabase = async () => {
     returning: true,
   });
 
+  await Alignment.bulkCreate(alignmentData, {
+    individualHooks: true,
+    returning: true,
+  });
+
   await Class.bulkCreate(classData, {
+    individualHooks: true,
+    returning: true,
+  });
+
+  await Subclass.bulkCreate(subclassData, {
     individualHooks: true,
     returning: true,
   });
@@ -34,11 +47,6 @@ const seedDatabase = async () => {
   });
 
   await Character.bulkCreate(characterData, {
-    individualHooks: true,
-    returning: true,
-  });
-
-  await Subclass.bulkCreate(subclassData, {
     individualHooks: true,
     returning: true,
   });

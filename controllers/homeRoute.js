@@ -1,6 +1,13 @@
 const router = require("express").Router();
 const withAuth = require("../utils/auth");
-const { Class, User, Race, Character } = require("../models");
+const {
+  Class,
+  User,
+  Race,
+  Character,
+  Subclass,
+  Alignment,
+} = require("../models");
 
 router.get("/", async (req, res) => {
   try {
@@ -26,7 +33,7 @@ router.get("/login", async (req, res) => {
 router.get("/characters", withAuth, async (req, res) => {
   // get all the characters that belong to user_id
   const userChars = await Character.findAll({
-    include: [{ model: Race }, { model: Class }],
+    include: [{ model: Race }, { model: Class }, { model: Alignment }],
     where: { user_id: req.session.user_id },
   });
 
@@ -38,6 +45,7 @@ router.get("/characters", withAuth, async (req, res) => {
     attributes: ["name"],
   });
 
+  console.log(characters);
   // declaring what we want to link to the handlebars for rendering on the html
   res.render("characters", {
     characters,
@@ -54,7 +62,12 @@ router.get("/characters/characterInfo/:name", withAuth, async (req, res) => {
   // get one clicked character that belong to user_id
   const userCharOne = await Character.findOne({
     where: { user_id: req.session.user_id, name: characterName },
-    include: [{ model: Race }, { model: Class }],
+    include: [
+      { model: Race },
+      { model: Class },
+      { model: Subclass },
+      { model: Alignment },
+    ],
   });
 
   // if user puts wrong name in url path, error handle
