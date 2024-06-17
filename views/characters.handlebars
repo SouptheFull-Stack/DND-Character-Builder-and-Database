@@ -1,14 +1,14 @@
- <a href="/characters/create"><button class="btn btn-success">+ Create New Character</button></a><br/><br/>
         {{!-- {{#each characters as |character|}}
         {{!-- {{#each characters as |character|}}
           <li>Name: {{name}} Age: {{age}} Race: {{race.name}} Class: {{class.name}}</li><a href=""><button class="btn">More Info</button></a>
         {{/each}} --}}
 
-<h1 class="text-center">Welcome, {{userName}}!</h1>
-<section class="container d-flex flex-wrap my-5">
+<h1 class="text-center py-5">Welcome, {{userName}}!</h1>
+ <a href="/characters/create"><button class="btn btn-success position-absolute top-20 start-50 translate-middle">+ Create New Character</button></a>
+<section class="container d-flex flex-wrap">
         {{#each characters}}
         <div class="card accordion-card">
-            <div class="card-body">
+            <div class="card-body my-3">
                 <h4 class="text-center charNames">{{name}}</h4>
                 <div class="accordion" id="accordionExample{{@index}}">
                     <div class="accordion-item">

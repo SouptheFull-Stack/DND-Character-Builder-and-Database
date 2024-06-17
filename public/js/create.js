@@ -32,19 +32,21 @@ const createCharHandler = async (event) => {
 
   const charName = document.querySelector("#char-name").value.trim();
   const charAge = document.querySelector("#char-age").value.trim() || null;
+  const charAlign = document.querySelector("#char-alignment").value;
   const charClass = document.querySelector("#char-class").value;
   const charSubclass = document.querySelector("#char-subclass").value;
   const charRace = document.querySelector("#char-race").value;
   const charUser = charForm.dataset.userid;
 
   // retrieve from the DOM the character data
-  if (charName && charClass && charSubclass && charRace) {
+  if (charName && charAlign && charClass && charSubclass && charRace) {
     // post the info to the specified end point
     const response = await fetch("/api/characters", {
       method: "POST",
       body: JSON.stringify({
         charName,
         charAge,
+        charAlign,
         charClass,
         charSubclass,
         charRace,

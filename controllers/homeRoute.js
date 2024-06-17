@@ -45,7 +45,6 @@ router.get("/characters", withAuth, async (req, res) => {
     attributes: ["name"],
   });
 
-  console.log(characters);
   // declaring what we want to link to the handlebars for rendering on the html
   res.render("characters", {
     characters,
@@ -90,11 +89,16 @@ router.get("/characters/create", withAuth, async (req, res) => {
   try {
     const dbClassData = await Class.findAll();
     const dbRaceData = await Race.findAll();
+    const dbAlignmentData = await Alignment.findAll();
     // Convert the objects into a plainer object where it is much easier to read the attributes
     const classses = dbClassData.map((classs) => classs.get({ plain: true }));
     const races = dbRaceData.map((race) => race.get({ plain: true }));
+    const alignments = dbAlignmentData.map((alignment) =>
+      alignment.get({ plain: true })
+    );
     res.render("create", {
       classses,
+      alignments,
       races,
       loggedIn: req.session.logged_in,
       userId: req.session.user_id,

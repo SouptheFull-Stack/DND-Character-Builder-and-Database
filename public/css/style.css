@@ -4,10 +4,6 @@
   --dark: #212529;
 }
 
-.background {
-  height: 8em;
-}
-
 @font-face {
   font-family: "dungeon";
   src: url("./dungeon.TTF");
@@ -101,6 +97,7 @@ main {
   width: 100%;
   display: block;
 }
+
 footer a {
   color: inherit;
 }
@@ -151,6 +148,7 @@ form h2 {
   align-items: center;
 }
 .login-container,
+.create-container,
 .register-container {
   padding: 20px;
   border: solid 1px #c8c8c8;
