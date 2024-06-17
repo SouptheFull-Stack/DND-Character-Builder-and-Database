@@ -22,7 +22,7 @@ router.get("/login", async (req, res) => {
   res.render("login");
 });
 
-// WRITING RENDER REQUEST FOR LOGGED IN -> PROFILE
+// WRITING RENDER REQUEST FOR LOGGED IN -> CHARACTERS
 router.get("/characters", withAuth, async (req, res) => {
   // get all the characters that belong to user_id
   const userChars = await Character.findAll({
@@ -53,7 +53,7 @@ router.get("/characters", withAuth, async (req, res) => {
   });
 });
 
-// WRITING A RENDER REQUEST FOR LOGGED IN -> PROFILE -> SINGLE CHARACTER DISPLAY
+// WRITING A RENDER REQUEST FOR LOGGED IN -> CHARACTERS -> SINGLE CHARACTER DISPLAY
 router.get("/characters/characterInfo/:name", withAuth, async (req, res) => {
   const characterName = req.params.name;
 

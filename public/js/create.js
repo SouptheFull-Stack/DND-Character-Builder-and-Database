@@ -1,29 +1,32 @@
 const charForm = document.getElementById("char-form");
-
 const classDropdown = document.getElementById("char-class");
 const subclassDropdown = document.getElementById("char-subclass");
 
+// EVENT LISTENER FUNCTION TO TRIGGER WHEN CLASS IS SELECTED IN DROPDOWN FORM
 classDropdown.addEventListener("change", async function (e) {
   // get handle on the selected class
   let selectedClassID = e.target.value; // RESEARCH MORE ON EVENT.TARGET
   console.log(selectedClassID);
 
+  // fetch the array objects
   const response = await fetch("/api/subclasses/classID/" + selectedClassID, {
     method: "GET",
   });
   const subclasses = await response.json();
   console.log(subclasses);
-  subclassDropdown.innerHTML = ""; // clearing
+  subclassDropdown.innerHTML = ""; // clearing the data so it doesn't leave the previous class' subclasses
   // subclassDropdown.options.add(new Option("Select a subclass..."));
   const placeholder = new Option("Select a subclass...");
   placeholder.disabled = true;
   placeholder.selected = true;
   subclassDropdown.options.add(placeholder);
+  // loops through each object and populates each into the dropdown list options
   for (const subclass of subclasses) {
     subclassDropdown.options.add(new Option(subclass.name, subclass.id));
   }
 });
 
+// FORM SUBMIT FUNCTION FOR CREATING A CHARACTER
 const createCharHandler = async (event) => {
   event.preventDefault();
 
