@@ -56,43 +56,27 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        {{! stretch goals! }}
-        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-        <li class="nav-item"><a
-            class="nav-link"
-            href="#"
-          >Characters</a></li>
-        <li class="nav-item"><a
-            class="nav-link"
-            href="#"
-          >Histories</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">More Info</a></li>
-        {{! if user is logged in, show profile and logout button }}
-        {{#if loggedIn}}
-          <li class="nav-item"><a
-              class="nav-link"
-              href="/profile"
-            >Profile</a></li>
-          <li class="nav-item"><button
-              class="nav-link"
-              id="logout"
-            >Logout</button></li>
-          {{! if not logged in, show login }}
-        {{else}}
-          <li class="nav-item"><a
-              class="nav-link"
-              href="/login"
-            >Login</a></li>
-        {{/if}}
-      </ul>
-    </div>
-  </div>
-</nav>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                  {{!-- stretch goals! --}}
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/characters">Characters</a></li>
+                    {{!-- <li class="nav-item"><a class="nav-link" href="#">Histories</a></li> --}}
+                    {{!-- if user is logged in, show profile and logout button --}}
+                    {{#if loggedIn}}
+                    <li class="nav-item"><a class="nav-link" href="/profile">Profile</a></li>
+                    <li class="nav-item"><button class="nav-link" id="logout">Logout</button></li>
+                    {{!-- if not logged in, show login --}}
+                    {{else}}
+                    <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
+                    {{/if}}
+                </ul>
+            </div>
+        </div>
+      </nav>
     </header>
 
-    <main class="py-5 px-3">
+    <main class="py-5 px-3 hero h-100">
       {{{body}}}
     </main>
 
@@ -144,9 +128,6 @@
     {{#if loggedIn}}
       <script src="/js/logout.js"></script>
     {{/if}}
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js" crossorigin="anonymous"></script>
   </body>
 </html>
