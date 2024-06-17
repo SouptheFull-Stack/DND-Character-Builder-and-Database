@@ -36,17 +36,11 @@ router.get("/characters", withAuth, async (req, res) => {
 
   const user = userDB.get({ plain: true });
 
-  const userDB = await User.findOne({
-    where: { id: req.session.user_id },
-  });
-
-  const user = userDB.get({ plain: true });
-
   // serialize the data
   const characters = userChars.map((char) => char.get({ plain: true }));
 
   // getting the logged in user's name
-  const user = await User.findByPk(req.session.user_id, {
+  const loggedInUser = await User.findByPk(req.session.user_id, {
     attributes: ["name"],
   });
 
@@ -55,7 +49,7 @@ router.get("/characters", withAuth, async (req, res) => {
     characters,
     loggedIn: req.session.logged_in,
     userId: req.session.user_id,
-    userName: user.name,
+    userName: loggedInUser.name,
   });
 });
 
