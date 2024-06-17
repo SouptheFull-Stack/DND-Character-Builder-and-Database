@@ -21,6 +21,13 @@
     "class_id": 9
   },
   {
+    "name": "E",
+    "age": 60,
+    "user_id": 1,
+    "race_id": 2,
+    "class_id": 2
+  },
+  {
     "name": "Ash",
     "age": 35,
     "user_id": 2,
@@ -31,7 +38,7 @@
     "name": "Zeltara",
     "age": 31,
     "user_id": 2,
-    "race_id": 1,
+    "race_id": 2,
     "class_id": 10
   },
   {

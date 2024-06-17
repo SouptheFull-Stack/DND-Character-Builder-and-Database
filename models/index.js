@@ -3,6 +3,7 @@ const User = require("./User");
 const Character = require("./Character");
 const Class = require("./Class");
 const Race = require("./Race");
+const Subclass = require("./Subclass");
 
 // user to character => one to many
 User.hasMany(Character, {
@@ -34,7 +35,17 @@ Character.belongsTo(Class, {
   foreignKey: "class_id",
 });
 
-module.exports = { User, Character, Class, Race };
+// class to subclass => one to many
+Class.hasMany(Subclass, {
+  foreignKey: "class_id",
+  onDelete: "CASCADE",
+});
+
+Subclass.belongsTo(Class, {
+  foreignKey: "class_id",
+});
+
+module.exports = { User, Character, Class, Race, Subclass };
 
 // I HATE DOING THE EXPORTING PLZ SOMEONE ELSE DO IT - Mitra
 // No worries Mitra - Mimi

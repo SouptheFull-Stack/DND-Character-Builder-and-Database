@@ -37,9 +37,8 @@
                 <ul class="navbar-nav ms-auto">
                   {{!-- stretch goals! --}}
                     <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Characters</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Histories</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">More Info</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/characters">Characters</a></li>
+                    {{!-- <li class="nav-item"><a class="nav-link" href="#">Histories</a></li> --}}
                     {{!-- if user is logged in, show profile and logout button --}}
                     {{#if loggedIn}}
                     <li class="nav-item"><a class="nav-link" href="/profile">Profile</a></li>
@@ -54,7 +53,7 @@
       </nav>
     </header>
 
-    <main class="py-5 px-3">
+    <main class="py-5 px-3 hero h-100">
       {{{body}}}
     </main>
 
@@ -97,5 +96,6 @@
     <script src="/js/logout.js"></script>
     {{/if}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js" crossorigin="anonymous"></script>
+     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   </body>
 </html>

@@ -4,18 +4,83 @@
   --dark: #212529;
 }
 
+.background {
+  height: 4em;
+}
+
 @font-face {
   font-family: "dungeon";
   src: url("./dungeon.TTF");
 }
 
-#charNames {
-  font-family: "dungeon";
+@font-face {
+  font-family: "king";
+  src: url("./king.ttf");
+}
+
+@font-face {
+  font-family: "ringbearer";
+  src: url("./ringbearer.TTF");
+}
+
+h1 {
+  font-family: "ringbearer", Arial, sans-serif;
   font-size: 6em;
+  color: #b79001;
+}
+
+.hero {
+  background-image: url("../images/h1.jpg");
+  background-size: auto;
+  /* background-position: center; */
+  background-repeat: no-repeat;
+  height: 100vh; /* Full height */
+  /* display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center; */
+}
+
+.charNames {
+  font-family: "dungeon", Arial, sans-serif;
+  font-size: 5em;
+  color: #b79001;
+}
+
+.accordian-item .accordian-button .accordian-header {
+  background-color: #b79001;
+}
+
+.accordion-body {
+  overflow: hidden; /* Prevent unexpected overflow */
+  background-color: var(--dark);
+  color: white;
+}
+
+.accordion-card {
+  width: 45%; /* Adjust as needed */
+  min-width: 300px; /* Ensure minimum size */
+  margin: 10px; /* Spacing between cards */
+  display: flex;
+  flex-direction: column;
+  background-color: var(--dark);
+}
+
+/* .accordian-button .accordian-header {
+  background-color: #242c33;
+} */
+
+.card-body {
+  flex-grow: 1;
 }
 
 .card {
-  display: inline-block;
+  background-color: var(--dark);
+  display: flex;
+  padding: 1em;
+  flex-direction: column;
+  height: 100%; /* Ensure card takes full height */
 }
 
 .navlogo {

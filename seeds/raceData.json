@@ -1,22 +1,192 @@
 [
     {
-        "name": "Dwarf",
-        "extra": "Darkvision:  you have superior vision in dark and dim conditions.",
-        "age": "Dwarves mature at the same rate as humans, but they're considered young until they reach the age of 50. On average, they live about 350 years.",
-        "size": "Medium: Dwarves stand between 4 and 5 feet tall and average about 150 pounds. Your size is Medium.",
-        "speed": "Speed: 25 ft. Your speed is not reduced by wearing heavy armor.",
-        "special_abilities": ["Tool Proficiency.", "Hehe", "Haha"],
-        "languages": ["Common", "Dwarvish"],
-        "stats": "Con +2"
+        "name": "Dragonborn",
+        "age": "Young dragonborn grow quickly. They walk hours after hatching, attain the size and development of a 10-year-old human child by the age of 3, and reach adulthood by 15. They live to be around 80.",
+        "stats": "Str +2; Cha +1",
+        "size": "Dragonborn are taller and heavier than humans, standing well over 6 feet tall and averaging almost 250 pounds. Your size is Medium.",
+        "speed": "30 ft.",
+        "special_abilities": ["Breath Weapon: You can use your action to exhale destructive energy. Your draconic ancestry determines the size, shape, and damage type of the exhalation. When you use your breath weapon, each creature in the area of the exhalation must make a saving throw, the type of which is determined by your draconic ancestry. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level. After you use your breath weapon, you can't use it again until you complete a short or long rest.", "Damage Resistance: You have resistance to the damage type associated with your draconic ancestry."],
+        "extra": [],
+        "languages": ["Common", "Draconic"]
     },
     {
-    "name": "Elf",
-    "extra": "You have proficiency in the Perception skill.",
-    "age": "Although elves reach physical maturity at about the same age as humans, the elven understanding of adulthood goes beyond physical growth to encompass worldly experience. An elf typically claims adulthood and an adult name around the age of 100 and can live to be 750 years old.",
-    "size": "Elves range from under 5 to over 6 feet tall and have slender builds. Your size is Medium.",
-    "speed": "30 ft.",
-    "special_abilities": ["Tool Proficiency.", "NOT HEEHE", "NOT Haha"],
-    "languages": ["Common", "Elvish"],
-    "stats": "Dex +2"
+        "name": "Dwarf",
+        "age": "Dwarves mature at the same rate as humans, but they're considered young until they reach the age of 50. On average, they live about 350 years.",
+        "stats": "Con +2",
+        "size": "Dwarves stand between 4 and 5 feet tall and average about 150 pounds. Your size is Medium.",
+        "speed": "Speed: 25 ft. Your speed is not reduced by wearing heavy armor.",
+        "special_abilities": ["Dwarven Resilience: You have advantage on saving throws against poison, and you have resistance against poison damage.", "Dwarven Combat Training: You have proficiency with the battleaxe, handaxe, light hammer, and warhammer.", "Stonecunning: Whenever you make an Intelligence (History) check related to the origin of stonework, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus."],
+        "extra": ["Darkvision: Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."],
+        "languages": ["Common", "Dwarvish"]
+    },
+    {
+        "name": "Hill Dwarf",
+        "age": "Dwarves mature at the same rate as humans, but they're considered young until they reach the age of 50. On average, they live about 350 years.",
+        "stats": "Con +2; Wis +1",
+        "size": "Dwarves stand between 4 and 5 feet tall and average about 150 pounds. Your size is Medium.",
+        "speed": "25 ft.  Your speed is not reduced by wearing heavy armor.",
+        "special_abilities": ["Dwarven Resilience: You have advantage on saving throws against poison, and you have resistance against poison damage.", "Dwarven Combat Training: You have proficiency with the battleaxe, handaxe, light hammer, and warhammer.", "Stonecunning: Whenever you make an Intelligence (History) check related to the origin of stonework, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus." ],
+        "extra": ["Darkvision: Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."],
+        "languages": ["Common", "Dwarvish"]
+    },
+    {
+        "name": "Mountain Dwarf",
+        "age": "Dwarves mature at the same rate as humans, but they're considered young until they reach the age of 50. On average, they live about 350 years.",
+        "stats": "Str +2; Con +2",
+        "size": "Dwarves stand between 4 and 5 feet tall and average about 150 pounds. Your size is Medium.",
+        "speed": "25 ft.  Your speed is not reduced by wearing heavy armor.",
+        "special_abilities": ["Dwarven Resilience: You have advantage on saving throws against poison, and you have resistance against poison damage.", "Dwarven Combat Training: You have proficiency with the battleaxe, handaxe, light hammer, and warhammer.", "Stonecunning: Whenever you make an Intelligence (History) check related to the origin of stonework, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus."],
+        "extra": ["Darkvision: Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."],
+        "languages": ["Common", "Dwarvish"]
+    },
+    {
+        "name": "Elf",
+        "age": "Although elves reach physical maturity at about the same age as humans, the elven understanding of adulthood goes beyond physical growth to encompass worldly experience. An elf typically claims adulthood and an adult name around the age of 100 and can live to be 750 years old.",
+        "stats": "Dex +2",
+        "size": "Elves range from under 5 to over 6 feet tall and have slender builds. Your size is Medium.",
+        "speed": "30 ft.",
+        "special_abilities": [],
+        "extra": ["Keen Senses: You have proficiency in the Perception skill.", "Fey Ancestry. You have advantage on saving throws against being charmed, and magic can't put you to sleep.", "Trance: Elves don't need to sleep. Instead, they meditate deeply, remaining semiconscious, for 4 hours a day. While meditating, you can dream after a fashion; such dreams are actually mental exercises that have become reflexive through years of practice. After resting in this way, you gain the same benefit that a human does from 8 hours of sleep."],
+        "languages": ["Common", "Elvish"]
+    },
+    {
+        "name": "Drow Elf",
+        "age": "Although elves reach physical maturity at about the same age as humans, the elven understanding of adulthood goes beyond physical growth to encompass worldly experience. An elf typically claims adulthood and an adult name around the age of 100 and can live to be 750 years old.",
+        "stats": "Dex +2; Cha +1",
+        "size": "Elves range from under 5 to over 6 feet tall and have slender builds. Your size is Medium.",
+        "speed": "30 ft.",
+        "special_abilities": ["Drow Weapon Training: You have proficiency with rapiers, shortswords, and hand crossbows.", "Drow Magic: You know the dancing lights cantrip. When you reach 3rd level, you can cast the faerie fire spell once with this trait; you regain the ability to cast it when you finish a long rest. When you reach 5th level, you can also cast the darkness spell once per day with this trait; you regain the ability to cast it "],
+        "extra": ["Superior Darkvision: Accustomed to the depths of the Underdark, you have superior vision in dark and dim conditions. You can see in dim light within 120 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.", "Sunlight Sensitivity: You have disadvantage on attack rolls and on Wisdom (Perception) checks that rely on sight when you, the target of your attack, or whatever you are trying to perceive is in direct sunlight."],
+        "languages": ["Common", "Elvish"]
+    },
+    {
+        "name": "High Elf",
+        "age": "Although elves reach physical maturity at about the same age as humans, the elven understanding of adulthood goes beyond physical growth to encompass worldly experience. An elf typically claims adulthood and an adult name around the age of 100 and can live to be 750 years old.",
+        "stats": "Dex +2; Int +1",
+        "size": "Elves range from under 5 to over 6 feet tall and have slender builds. Your size is Medium.",
+        "speed": "30 ft.",
+        "special_abilities": ["Elf Weapon Training: You have proficiency with the longsword, shortsword, shortbow, and longbow.", "Cantrip: You know one cantrip of your choice from the wizard spell list. Intelligence is your spellcasting ability for it.", "Extra Language: You can speak, read, and write one extra language of your choosing."],
+        "extra": ["Keen Senses: You have proficiency in the Perception skill.", "Fey Ancestry. You have advantage on saving throws against being charmed, and magic can't put you to sleep.", "Trance: Elves don't need to sleep. Instead, they meditate deeply, remaining semiconscious, for 4 hours a day. While meditating, you can dream after a fashion; such dreams are actually mental exercises that have become reflexive through years of practice. After resting in this way, you gain the same benefit that a human does from 8 hours of sleep."],
+        "languages": ["Common", "Elvish"]
+    },
+    {
+        "name": "Wood Elf",
+        "age": "Although elves reach physical maturity at about the same age as humans, the elven understanding of adulthood goes beyond physical growth to encompass worldly experience. An elf typically claims adulthood and an adult name around the age of 100 and can live to be 750 years old.",
+        "stats": "Dex +2; Wis +1",
+        "size": "Elves range from under 5 to over 6 feet tall and have slender builds. Your size is Medium.",
+        "speed": "35 ft.",
+        "special_abilities": ["Fleet of Foot: Your base walking speed increases to 35 feet.", "Mask of the Wild: You can attempt to hide even when you are only lightly obscured by foliage, heavy rain, falling snow, mist, and other natural phenomena."],
+        "extra": ["Keen Senses: You have proficiency in the Perception skill.", "Fey Ancestry. You have advantage on saving throws against being charmed, and magic can't put you to sleep.", "Trance: Elves don't need to sleep. Instead, they meditate deeply, remaining semiconscious, for 4 hours a day. While meditating, you can dream after a fashion; such dreams are actually mental exercises that have become reflexive through years of practice. After resting in this way, you gain the same benefit that a human does from 8 hours of sleep."],
+        "languages": ["Common", "Elvish"]
+    },
+    {
+        "name": "Gnome",
+        "age": "Gnomes mature at the same rate humans do, and most are expected to settle down into an adult life by around age 40. They can live 350 to almost 500 years.",
+        "stats": "Int +2",
+        "size": "Gnomes are between 3 and 4 feet tall and average about 40 pounds. Your size is Small.",
+        "speed": "25 ft.",
+        "special_abilities": ["Gnome Cunning: You have advantage on all Intelligence, Wisdom, and Charisma saving throws against magic."],
+        "extra": ["Darkvision: Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."],
+        "languages": ["Common", "Gnomish"]
+    },
+    {
+        "name": "Forest Gnome",
+        "age": "Gnomes mature at the same rate humans do, and most are expected to settle down into an adult life by around age 40. They can live 350 to almost 500 years.",
+        "stats": "Int +2; Dex +1",
+        "size": "Gnomes are between 3 and 4 feet tall and average about 40 pounds. Your size is Small.",
+        "speed": "25 ft.",
+        "special_abilities": ["Natural Illusionist: You know the minor illusion cantrip. Intelligence is your spellcasting ability for it.", "Speak with Small Beasts: Through sounds and gestures, you can communicate simple ideas with Small or smaller beasts. Forest gnomes love animals and often keep squirrels, badgers, rabbits, moles, woodpeckers, and other creatures as beloved pets."],
+        "extra": ["Darkvision: Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.", "Gnome Cunning: You have advantage on all Intelligence, Wisdom, and Charisma saving throws against magic."],
+        "languages": ["Common", "Gnomish"]
+    },
+    {
+        "name": "Rock Gnome",
+        "age": "Gnomes mature at the same rate humans do, and most are expected to settle down into an adult life by around age 40. They can live 350 to almost 500 years.",
+        "stats": "Int +2; Con +1",
+        "size": "Gnomes are between 3 and 4 feet tall and average about 40 pounds. Your size is Small.",
+        "speed": "25 ft.",
+        "special_abilities": ["Artificer's Lore: Whenever you make an Intelligence (History) check related to magic items, alchemical objects, or technological devices, you can add twice your proficiency bonus, instead of any proficiency bonus you normally apply.", "Tinker: You have proficiency with artisan's tools (tinker's tools). Using those tools, you can spend 1 hour and 10 gp worth of materials to construct a Tiny clockwork device (AC 5, 1 hp). The device ceases to function after 24 hours (unless you spend 1 hour repairing it to keep the device functioning), or when you use your action to dismantle it; at that time, you can reclaim the materials used to create it. You can have up to three such devices active at a time."],
+        "extra": ["Darkvision: Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.", "Gnome Cunning: You have advantage on all Intelligence, Wisdom, and Charisma saving throws against magic."],
+        "languages": ["Common", "Gnomish"]
+    },
+    {
+        "name": "Half-Elf",
+        "age": "Half-elves mature at the same rate humans do and reach adulthood around the age of 20. They live much longer than humans, however, often exceeding 180 years.",
+        "stats": "Cha +2; Choose any other two unique +1",
+        "size": "Half-elves are about the same size as humans, ranging from 5 to 6 feet tall. Your size is Medium.",
+        "speed": "30 ft.",
+        "special_abilities": ["Skill Versatility: You gain proficiency in two skills of your choice."],
+        "extra": ["Darkvision: Thanks to your elf blood, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.", "Fey Ancestry: You have advantage on saving throws against being charmed, and magic can't put you to sleep."],
+        "languages": ["Common", "Elvish"]
+    },
+    {
+        "name": "Half-Orc",
+        "age": "Half-orcs mature a little faster than humans, reaching adulthood around age 14. They age noticeably faster and rarely live longer than 75 years.",
+        "stats": "Str +2; Con +1",
+        "size": "Half-orcs are somewhat larger and bulkier than humans, and they range from 5 to well over 6 feet tall. Your size is Medium.",
+        "speed": "30 ft.",
+        "special_abilities": ["Menacing: You gain proficiency in the Intimidation skill.", "Relentless Endurance: When you are reduced to 0 hit points but not killed outright, you can drop to 1 hit point instead. You can't use this feature again until you finish a long rest.", "Savage Attacks: When you score a critical hit with a melee weapon attack, you can roll one of the weapon's damage dice one additional time and add it to the extra damage of the critical hit."],
+        "extra": ["Darkvision. Thanks to your orc blood, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.", ""],
+        "languages": ["Common", "Orc"]
+    },
+    {
+        "name": "Halfling",
+        "age": "A halfling reaches adulthood at the age of 20 and generally lives into the middle of his or her second century.",
+        "stats": "Dex +2",
+        "size": "Halflings average about 3 feet tall and weigh about 40 pounds. Your size is Small.",
+        "speed": "25 ft.",
+        "special_abilities": ["Lucky: When you roll a 1 on an attack roll, ability check, or saving throw, you can reroll the die and must use the new roll.", "Brave: You have advantage on saving throws against being frightened.", "Halfling Nimbleness: You can move through the space of any creature that is of a size larger than yours."],
+        "extra": [],
+        "languages": ["Common", "Halfling"]
+    },
+    {
+        "name": "Lightfoot Halfling",
+        "age": "A halfling reaches adulthood at the age of 20 and generally lives into the middle of his or her second century.",
+        "stats": "Dex +2; Cha +1",
+        "size": "Halflings average about 3 feet tall and weigh about 40 pounds. Your size is Small.",
+        "speed": "25 ft.",
+        "special_abilities": ["Lucky: When you roll a 1 on an attack roll, ability check, or saving throw, you can reroll the die and must use the new roll.", "Brave: You have advantage on saving throws against being frightened.", "Halfling Nimbleness: You can move through the space of any creature that is of a size larger than yours."],
+        "extra": ["Naturally Stealthy: You can attempt to hide even when you are obscured only by a creature that is at least one size larger than you."],
+        "languages": ["Common", "Halfling"]
+    },
+    {
+        "name": "Stout Halfling",
+        "age": "A halfling reaches adulthood at the age of 20 and generally lives into the middle of his or her second century.",
+        "stats": "Dex +2; Con +1",
+        "size": "Halflings average about 3 feet tall and weigh about 40 pounds. Your size is Small.",
+        "speed": "25 ft.",
+        "special_abilities": ["Lucky: When you roll a 1 on an attack roll, ability check, or saving throw, you can reroll the die and must use the new roll.", "Brave: You have advantage on saving throws against being frightened.", "Halfling Nimbleness: You can move through the space of any creature that is of a size larger than yours."],
+        "extra": ["Stout Resilience: You have advantage on saving throws against poison, and you have resistance against poison damage."],
+        "languages": ["Common", "Halfling"]
+    },
+    {
+        "name": "Human",
+        "age": "Humans reach adulthood in their late teens and live less than a century.",
+        "stats": "Str +1; Dex +1; Con +1; Int +1; Wis +1; Cha +1",
+        "size": "Humans vary widely in height and build, from barely 5 feet to well over 6 feet tall. Regardless of your position in that range, your size is Medium.",
+        "speed": "30 ft.",
+        "special_abilities": [""],
+        "extra": [],
+        "languages": ["Common", "Language of your choice"]
+    },
+    {
+        "name": "Variant Human",
+        "age": "Humans reach adulthood in their late teens and live less than a century.",
+        "stats": "Choose any two unique +1",
+        "size": "Humans vary widely in height and build, from barely 5 feet to well over 6 feet tall. Regardless of your position in that range, your size is Medium.",
+        "speed": "30 ft.",
+        "special_abilities": ["Skills: You gain proficiency in one skill of your choice.", "Feat: You gain one feat of your choice."],
+        "extra": [],
+        "languages": ["Common", "Language of your choice"]
+    },
+    {
+        "name": "Tiefling",
+        "age": "Tieflings mature at the same rate as humans but live a few years longer.",
+        "stats": "Cha +2; Int +1",
+        "size": "Tieflings are about the same size and build as humans. Your size is Medium.",
+        "speed": "30 ft.",
+        "special_abilities": ["Hellish Resistance: You have resistance to fire damage.", "Infernal Legacy: You know the thaumaturgy cantrip. Once you reach 3rd level, you can cast the hellish rebuke spell as a 2nd-level spell with this trait; you regain the ability to cast it when you finish a long rest. Once you reach 5th level, you can also cast the darkness spell once per day with this trait; you regain the ability to cast it when you finish a long rest. Charisma is your spellcasting ability for these spells."],
+        "extra": ["Darkvision: Thanks to your infernal heritage, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."],
+        "languages": ["Common", "Infernal"]
     }
 ]
