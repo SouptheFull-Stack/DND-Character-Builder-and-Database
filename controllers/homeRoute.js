@@ -109,4 +109,16 @@ router.get("/characters/create", withAuth, async (req, res) => {
   }
 });
 
+// dice page
+router.get("/dice", async (req, res) => {
+  try {
+    res.render("dice", {
+      loggedIn: req.session.logged_in,
+      userId: req.session.user_id,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 module.exports = router;

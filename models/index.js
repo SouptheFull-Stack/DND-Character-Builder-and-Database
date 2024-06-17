@@ -6,7 +6,7 @@ const Race = require("./Race");
 const Subclass = require("./Subclass");
 const Alignment = require("./Alignment");
 
-// user to character => one to many
+// character to user => one to many
 User.hasMany(Character, {
   foreignKey: "user_id",
   onDelete: "CASCADE",
@@ -16,7 +16,7 @@ Character.belongsTo(User, {
   foreignKey: "user_id",
 });
 
-// character to race => one to many
+// race to character => one to many
 Race.hasMany(Character, {
   foreignKey: "race_id",
   onDelete: "CASCADE",
@@ -26,7 +26,7 @@ Character.belongsTo(Race, {
   foreignKey: "race_id",
 });
 
-// character to class => one to many
+// class to character => one to many
 Class.hasMany(Character, {
   foreignKey: "class_id",
   onDelete: "CASCADE",
@@ -46,7 +46,17 @@ Character.belongsTo(Alignment, {
   foreignKey: "alignment_id",
 });
 
-// class to subclass => one to many
+// many to one (character has one alignment, alignments have a lot of characters)
+Alignment.hasMany(Character, {
+  foreignKey: "alignment_id",
+  onDelete: "CASCADE",
+});
+
+Character.belongsTo(Alignment, {
+  foreignKey: "alignment_id",
+});
+
+// subclass to class => one to many
 Class.hasMany(Subclass, {
   foreignKey: "class_id",
   onDelete: "CASCADE",

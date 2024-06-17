@@ -1,7 +1,9 @@
 :root {
   --white: #ffffff;
-  --accent: #ff4155;
+  --accentRed: #ff4155;
   --dark: #212529;
+  --accentYellow: #b79001;
+  --transparentWhite: rgba(255, 255, 255, 0.6);
 }
 
 @font-face {
@@ -22,7 +24,12 @@
 h1 {
   font-family: "ringbearer", Arial, sans-serif;
   font-size: 6em;
-  color: #b79001;
+  color: var(--accentYellow);
+}
+
+h2 {
+  font-size: 3em;
+  color: var(--accentYellow);
 }
 
 main {
@@ -40,18 +47,18 @@ main {
 
 .charNames {
   font-family: "dungeon", Arial, sans-serif;
-  color: #b79001;
   font-size: 5em;
+  color: var(--accentYellow);
 }
 
 .accordian-item .accordian-button .accordian-header {
-  background-color: #b79001;
+  background-color: var(--accentYellow);
 }
 
 .accordion-body {
   overflow: hidden; /* Prevent unexpected overflow */
   background-color: var(--dark);
-  color: white;
+  color: var(--white);
 }
 
 .accordion-card {
@@ -114,7 +121,7 @@ footer a {
 
 .brand {
   background-color: var(--dark);
-  color: #ff4155;
+  color: var(--accentRed);
 }
 
 .content-box {
@@ -154,8 +161,8 @@ form h2 {
   border: solid 1px #c8c8c8;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(2px);
-  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(2px) ;
+  background-color: var(--transparentWhite);
 }
 .form-group {
   margin-bottom: 20px;
@@ -179,7 +186,7 @@ button[type="submit"] {
   border: none;
   border-radius: 5px;
   background-color: #9d7d06;
-  color: #fff;
+  color: var(--white);
   cursor: pointer;
 }
 .is-hidden {
@@ -189,7 +196,7 @@ button[type="submit"] {
 h4 {
   font-family: "ringbearer", Arial, sans-serif;
   font-size: 3em;
-  color: #ffffff;
+  color: var(--accentYellow);
 }
 
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
@@ -250,5 +257,47 @@ h4 {
 }
 
 .homepage-body {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.dice {
+  background-color: var(--transparentWhite);
+  border-radius: 1em;
+  padding: 0.5em;
+}
+
+.modifier {
+  width: 7em;
+}
+
+#log {
+  background-color: var(--transparentWhite);
+  margin: 0.2em;
+  border-radius: 1em;
+}
+
+.wholepage {
+  display: flex;
+  flex-direction: column;
+}
+
+.finalres {
+  background-color: var(--accentYellow);
+  border-radius: 1em;
+  padding: 0.5em 1em;
+  margin: 0.5em;
+}
+
+.result {
+  background-color: var(--accentYellow);
+}
+
+.pad-it {
+  padding: 0.5em;
+}
+
+h5 {
+  color: #912630;
+  font-family: "ringbearer", Arial, sans-serif;
+  font-size: 2em;
 }
