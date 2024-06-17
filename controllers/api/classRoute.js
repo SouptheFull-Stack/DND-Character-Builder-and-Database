@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Class } = require("../../models");
+const { Class, Subclass } = require("../../models");
 
 // CREATE NEW CLASS
 router.post("/", async (req, res) => {
@@ -49,24 +49,18 @@ router.get("/name/:name", async (req, res) => {
   }
 });
 
-// GET ONE CLASS BY NAME?!?! SECOND METHOD OF SYNTAX
-// router.get("/:name", async (req, res) => {
-//   try {
-//     const nameClass = await Class.findOne({
-//       where: {
-//         name: req.params.name,
-//       },
-//     });
-//     if (nameClass) {
-//       res.status(200).json(nameClass);
-//     } else {
-//       res.status(404).send("Class not found!");
-//     }
-//   } catch (err) {
-//     console.error(err);
-//     res.status(500).send("Error retrieving class!");
-//   }
-// });
+// GET SUBCLASS BASED ON PICKED OPTION IN CLASS
+router.get("/subclasses/:classId", async (req, res) => {
+  try {
+    const subclasses = await Subclass.findAll({
+      where: { classId: req.params.classId },
+    });
+
+    res.json(subclasses);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 // UPDATE CLASS
 router.put("/:id", async (req, res) => {

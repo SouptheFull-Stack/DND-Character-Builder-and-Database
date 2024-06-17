@@ -22,23 +22,58 @@ router.get("/login", async (req, res) => {
   res.render("login");
 });
 
-router.get("/profile", withAuth, async (req, res) => {
+// WRITING RENDER REQUEST FOR LOGGED IN -> PROFILE
+router.get("/characters", withAuth, async (req, res) => {
+  // get all the characters that belong to user_id
   const userChars = await Character.findAll({
     include: [{ model: Race }, { model: Class }],
     where: { user_id: req.session.user_id },
   });
 
   const userDB = await User.findOne({
-    where: { id: req.session.user_id},
+    where: { id: req.session.user_id },
   });
 
-  const user = userDB.get({plain: true});
+  const user = userDB.get({ plain: true });
 
+  // serialize the data
   const characters = userChars.map((char) => char.get({ plain: true }));
 
-  res.render("profile", {
-    user,
+  // getting the logged in user's name
+  const loggedInUser = await User.findByPk(req.session.user_id, {
+    attributes: ["name"],
+  });
+
+  // declaring what we want to link to the handlebars for rendering on the html
+  res.render("characters", {
     characters,
+    loggedIn: req.session.logged_in,
+    userId: req.session.user_id,
+    userName: loggedInUser.name,
+  });
+});
+
+// WRITING A RENDER REQUEST FOR LOGGED IN -> PROFILE -> SINGLE CHARACTER DISPLAY
+router.get("/characters/characterInfo/:name", withAuth, async (req, res) => {
+  const characterName = req.params.name;
+
+  // get one clicked character that belong to user_id
+  const userCharOne = await Character.findOne({
+    where: { user_id: req.session.user_id, name: characterName },
+    include: [{ model: Race }, { model: Class }],
+  });
+
+  // if user puts wrong name in url path, error handle
+  if (!userCharOne) {
+    return res.status(404).send("Character not found!");
+  }
+
+  // serialize the data
+  const characterSingle = userCharOne.get({ plain: true });
+
+  // declaring what we want to link to the handlebars for rendering on the html
+  res.render("character", {
+    characterSingle,
     loggedIn: req.session.logged_in,
     userId: req.session.user_id,
   });
@@ -51,7 +86,7 @@ router.get("/info", withAuth, async (req, res) => {
   });
 });
 
-router.get("/profile/create", withAuth, async (req, res) => {
+router.get("/characters/create", withAuth, async (req, res) => {
   try {
     const dbClassData = await Class.findAll();
     const dbRaceData = await Race.findAll();
