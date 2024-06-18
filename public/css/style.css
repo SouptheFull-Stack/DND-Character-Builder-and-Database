@@ -33,6 +33,10 @@ h2 {
   color: var(--accentYellow);
 }
 
+html, body {
+  height: 100%;;
+}
+
 main {
   background-image: url("../images/h1.jpg");
   background-size: auto;
@@ -398,8 +402,7 @@ h5 {
 }
 
 .wholepage {
-  display: flex;
-  flex-direction: column;
+  min-height: 60%;
 }
 
 .finalres {
