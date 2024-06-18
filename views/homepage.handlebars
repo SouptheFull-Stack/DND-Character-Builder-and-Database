@@ -1,5 +1,4 @@
 {{!-- putting condition on homepage to then render the overlay for the hero, but don't want on other pages --}}
-{{#if isHomePage}}
 <div class="overlay py-5"> 
     {{!-- homepage-body --}}
     {{!-- Put the main homepage html here and insert whatever other handlebars we have --}}
@@ -8,10 +7,16 @@
             <div class="flip-card">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
-                        <a href="#"></a><img src="/images/h6.jpg" alt="" class="flip-img"></a>
+
+                        <img src="/images/card1.jpg" alt="" class="flip-img">
                     </div>
                     <div class="flip-card-back">
-                       <a href="#"><img src="/images/h6.jpg" alt="" class="flip-img"></a>
+                        <div class="flip-card-content-start">
+                            <br>
+                            <h5>Choose your adventure...</h5>
+                            <br>
+                            <p>In the multiverse of Dungeons & Dragons there are near limitless opportunies for exploration and journeying.</p>
+                        </div>
                     </div>
                 </div>
                 <div class="mt-5">
@@ -21,10 +26,29 @@
             <div class="flip-card">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
-                        <img href="/characters/create" src="/images/h8.jpg" alt="" class="flip-img">
+
+                        <img src="/images/card4.jpg" alt="" class="flip-img">
                     </div>
                     <div class="flip-card-back">
-                        <a href="/characters/create"><img src="/images/h9.png" alt="" class="flip-img"></a>
+                        <div class="flip-card-content-character">
+                            <br>
+                            <h5>Pick who you will be...</h5>
+                            <br>
+                            <p>Add a character to your profile and choose the following details</p>
+                            <br>
+                            <p class="text-danger mb-1">Alignment</p>
+                            <p>The morality of your character is charted by their alignment and affects the decisions they may make on their adventure. Are you a noble knight or a deranged necromancer, your alignment may very well have influence on this.</p>
+                            <br>
+                            <p class="text-danger mb-1">Class</p>
+                            <p>The primary definition of what your character can do. It’s more than a profession; it’s your character’s calling. Class shapes the way you think about the world and interact with it.</p>
+                            <br>
+                            <p class="text-danger mb-1">Subclass</p>
+                            <p>The niche of your profession, highlighting a particular area in your class your character excels at.</p>
+                             <br>
+                            <p class="text-danger mb-1">Race</p>
+                            <p>The worlds of Dungeons & Dragons comprise of people of varying size, shape, and color, dressed in a spectrum of styles and hues. This is representative of the many different races of the multiverse, from diminutive halflings and stout dwarves to hulking dragonborns to mystic Gith.</p>
+                        </div>
+                        <a href="/characters/create"><button class="flip-card-btn">Click Here</button></a>
                     </div>
                 </div>
                 <div class="mt-5">
@@ -34,10 +58,22 @@
             <div class="flip-card">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
-                      <a href="/dice"><img id="diceLink" src="/images/h5.jpg" alt="image of a man crouched behind stone, weary of the giant red dragon waiting for him to meet his demise" class="flip-img"></a>  
+
+                        <img src="/images/card5.jpg" alt="" class="flip-img">
                     </div>
                     <div class="flip-card-back">
-                        <a href="/dice"><img id="diceLink" src="/images/h5.jpg" alt="image of a man crouched behind stone, weary of the giant red dragon waiting for him to meet his demise" class="flip-img"></a>
+                        <div class="flip-card-content-roll">
+                            <br>
+                            <h5>Try your luck...</h5>
+                            <br>
+                            <p>Rolling die is an integral part of Dungeons & Dragons and is central to resolving various actions, especially in combat.</p>
+                            <br>
+                            <p>From attacks to spells and healing, each roll involves throwing dice and adding any relevant modifiers or bonuses. Whether facing foes or casting spells, the roll's result often decides success or failure.</p>
+                            <br>
+                            <p>In general, the D4, D6, D8, D10 and D12 are used for weapons damage, attacks, spells and healing amounts. D20 dice are used most often to see if an attempted action succeeds.​</p>
+                            <img src="/images/dice1.png" alt="" class="dice-img">
+                        </div>
+                        <a href="/dice"><button class="flip-card-btn">Click Here</button></a>
                     </div>
                 </div>
                 <div class="mt-5">
@@ -48,5 +84,6 @@
     </div>
     <br>
     <br>
+    <br>
 </div>
-{{/if}}
+
