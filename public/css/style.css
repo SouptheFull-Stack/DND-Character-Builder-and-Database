@@ -92,6 +92,10 @@ main {
 }
 
 .navbar {
+  background: linear-gradient(0deg,
+  rgb(54, 50, 63) 0%,
+  rgb(0, 0, 0) 100%);
+  
   padding-left: 100px;
   padding-right: 100px;
 }
@@ -145,6 +149,10 @@ footer a {
 
 footer {
   /* bottom: 0; */
+  background: linear-gradient(0deg,
+  rgb(54, 50, 63) 0%,
+  rgb(96, 95, 99) 100%);
+
   width: 100%;
 }
 
@@ -233,6 +241,13 @@ h5 {
   }
 }
 
+@media only screen and (max-width: 1660px) {
+
+  .flip-card-back {
+    font-size: 0.7em;
+  }
+}
+
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-card {
   background-color: transparent;
@@ -278,12 +293,14 @@ h5 {
 /* Style the back side */
 .flip-card-back {
   background: linear-gradient(0deg,
-  rgb(50, 51, 110) 0%,
-  rgba(14, 11, 22, 1) 100%);
+      rgb(50, 51, 110) 0%,
+      rgba(14, 11, 22, 1) 100%);
 
   font-family: "ringbearer", Arial, sans-serif;
   color: white;
   transform: rotateY(180deg);
+
+  max-height: 100%;
 }
 
 .flip-card-content-start {
