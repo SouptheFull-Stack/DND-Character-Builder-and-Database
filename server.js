@@ -5,11 +5,6 @@ const exphbs = require("express-handlebars");
 const routes = require("./controllers");
 const helpers = require("./utils/helpers");
 const withAuth = require("./utils/auth");
-const openai = require("openai");
-client = new openai.OpenAI({
-  apiKey: "dXi64eWezDx0qvUvMwMfT3BlbkFJhiZrn6aKcSp82MBRiMbt",
-});
-// sk - maprojectbot -
 
 // add random number generator
 const rn = require("random-number");
