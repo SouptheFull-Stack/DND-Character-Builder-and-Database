@@ -9,9 +9,11 @@ router.post("/", async (req, res) => {
     const newCharacter = await Character.create({
       name: req.body.charName,
       age: req.body.charAge,
+      alignment_id: req.body.charAlign,
       user_id: req.body.charUser,
-      class_id: req.body.charClas,
       race_id: req.body.charRace,
+      class_id: req.body.charClass,
+      subclass_id: req.body.charSubclass,
     });
     res.status(200).json(newCharacter);
   } catch (err) {

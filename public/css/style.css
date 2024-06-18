@@ -3,9 +3,43 @@
   --accentRed: #ff4155;
   --dark: #212529;
   --accentYellow: #b79001;
+  --darkHigh: #2a3642;
   --transparentWhite: rgba(255, 255, 255, 0.6);
 }
 
+/* this is to make the body content not get stuck at the top, so it looks neater and is spaced for everything automatically */
+main {
+  margin-top: 6em;
+}
+
+body {
+  height: 80em;
+  background-image: url("../images/h1.jpg");
+  background-size: auto;
+  /* background-position: center; */
+  background-repeat: repeat-y;
+  /* display: flex;
+  flex-direction: column; */
+  min-height: 100vh;
+  position: relative;
+}
+
+.overlay {
+  position: relative;
+}
+
+.overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black color */
+  z-index: -1; /* Ensure the overlay is behind the content */
+}
+
+/* FONTS */
 @font-face {
   font-family: "dungeon";
   src: url("./dungeon.TTF");
@@ -21,9 +55,30 @@
   src: url("./ringbearer.TTF");
 }
 
-h1 {
+.sedan-sc-regular {
+  font-family: "Sedan SC", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* BELOW ARE CSS STYLES FOR NAV HEADER */
+
+.navlogo {
+  width: 100px;
+  height: 100px;
+}
+
+.navbar-nav .nav-link {
+  font-size: 1.5em;
+  width: 100%;
+  margin-right: 1em;
+}
+
+.cs-h1 {
   font-family: "ringbearer", Arial, sans-serif;
-  font-size: 6em;
+  font-size: 5em;
+  /* adjusting the margin to not go too low from main margin */
+  margin-top: -0.5em;
   color: var(--accentYellow);
 }
 
@@ -32,50 +87,85 @@ h2 {
   color: var(--accentYellow);
 }
 
-main {
-  background-image: url("../images/h1.jpg");
-  background-size: auto;
-  /* background-position: center; */
-  background-repeat: repeat-y;
-  /* height: 90em; Full height */
-  /* display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  text-align: center; */
+.cs-h3 {
+  font-size: 2.5em !important;
 }
 
-.charNames {
-  font-family: "dungeon", Arial, sans-serif;
-  font-size: 5em;
+.cs-h3-info {
+  font-size: 7em;
+  font-family: "ringbearer", Arial, sans-serif;
   color: var(--accentYellow);
 }
 
-.accordian-item .accordian-button .accordian-header {
-  background-color: var(--accentYellow);
+.cs-p1 {
+  font-size: 1.5m !important;
 }
 
-.accordion-body {
-  overflow: hidden; /* Prevent unexpected overflow */
+.cs-charNames {
+  font-family: "dungeon", Arial, sans-serif;
+  font-size: 6em;
+  /* color: var(--accentYellow); */
+}
+
+.cs-charInfo {
+  font-size: 5em;
+  font-family: "king", Arial, sans-serif;
+}
+
+.charStory {
+  font-size: 3em;
+  color: var(--accentYellow);
+  font-family: "king", Arial, sans-serif;
+}
+
+/* BELOW IS THE COPY EDIT AS NEEDED */
+.accordion-item {
+  /* #445d77; */
+  /* #364d66; */
+  background: #4e6883;
+  border: none;
+}
+
+.accordion-button {
+  font-size: 0.38em;
+  background: transparent;
+  font-weight: 500;
+  color: black;
+}
+
+.accordion-button:not(.collapsed) {
+  background: rgba(0, 0, 0, 0.1);
+  color: black;
+  box-shadow: none;
+}
+
+.accordion-button::after {
+  background-image: none;
+  color: black;
+  content: "\f0d7";
+  width: auto;
+  height: auto;
+}
+
+.accordion-button:not(.collapsed)::after {
+  background-image: none;
+}
+
+.accordion-body,
+.stats > p {
+  overflow: hidden;
   background-color: var(--dark);
-  color: var(--white);
+  color: var(--accentYellow);
+  font-size: 1.5em;
 }
 
 .accordion-card {
-  width: 45%; /* Adjust as needed */
-  min-width: 300px; /* Ensure minimum size */
-  margin: 10px; /* Spacing between cards */
+  width: 20%;
+  min-width: 300px;
+  margin: 10px;
   display: flex;
   flex-direction: column;
   background-color: var(--dark);
-}
-
-/* .accordian-button .accordian-header {
-  background-color: #242c33;
-} */
-
-.card-body {
-  flex-grow: 1;
 }
 
 .card {
@@ -83,36 +173,17 @@ main {
   display: flex;
   padding: 1em;
   flex-direction: column;
-  height: 100%; /* Ensure card takes full height */
+  height: 100%;
 }
 
-.navbar {
-  padding-left: 100px;
-  padding-right: 100px;
-}
-
-.navlogo {
-  width: 100px;
-  height: 100px;
-}
-.navbar-nav {
-  justify-content: space-between;
-}
-
-.navbar-nav .nav-link {
-  font-size: 20px;
-  width: 100%;
-  display: block;
+#charOneLinks:hover {
+  color: var(--accentYellow);
+  opacity: 0.3;
+  transition: color 0.3s, opacity 0.3s;
 }
 
 footer a {
   color: inherit;
-}
-
-.sedan-sc-regular {
-  font-family: "Sedan SC", serif;
-  font-weight: 400;
-  font-style: normal;
 }
 
 .centre {
@@ -134,13 +205,13 @@ footer a {
 }
 
 footer {
-  position: absolute;
-  width: 100%;
-  /* height: 10em; */
+  width: 100vw;
+  height: 20%;
 }
 
 .footer-body {
-  display: inline-block;
+  /* display: inline-block; */
+  /* margin-bottom: -60px; */
   align-items: center;
 }
 
@@ -157,9 +228,12 @@ form h2 {
   justify-content: center;
   align-items: center;
 }
+
 .login-container,
 .create-container,
-.register-container {
+.register-container,
+.charactersMain-container,
+.characterOne-container {
   padding: 20px;
   border: solid 1px #c8c8c8;
   border-radius: 10px;
@@ -234,6 +308,8 @@ h4 {
   border: 1px solid #ffffff;
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
+  border-radius: 60px;
+  border: none;
 }
 
 /* Style the front side (fallback if image is missing) */
@@ -246,9 +322,10 @@ h4 {
 .flip-card-back {
   background: linear-gradient(
     0deg,
-    rgba(128, 161, 255, 1) 0%,
+    rgb(88, 108, 163) 0%,
     rgba(14, 11, 22, 1) 100%
   );
+  /* rgba(128, 161, 255, 1) 0%, made the colour just slightlly darker */
   color: white;
   transform: rotateY(180deg);
 }
@@ -257,10 +334,12 @@ h4 {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 60px;
+  border: none;
 }
 
 .homepage-body {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .dice {
@@ -303,4 +382,8 @@ h5 {
   color: #912630;
   font-family: "ringbearer", Arial, sans-serif;
   font-size: 2em;
+}
+
+.cs-footer-text {
+  font-size: 0.7em;
 }

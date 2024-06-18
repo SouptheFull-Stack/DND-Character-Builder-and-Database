@@ -1,11 +1,12 @@
 const charForm = document.getElementById("char-form");
 const classDropdown = document.getElementById("char-class");
 const subclassDropdown = document.getElementById("char-subclass");
+const charImageForm = document.getElementById("char-image-form");
 
 // EVENT LISTENER FUNCTION TO TRIGGER WHEN CLASS IS SELECTED IN DROPDOWN FORM
-classDropdown.addEventListener("change", async function (e) {
+classDropdown.addEventListener("change", async function (event) {
   // get handle on the selected class
-  let selectedClassID = e.target.value; // RESEARCH MORE ON EVENT.TARGET
+  let selectedClassID = event.target.value; // RESEARCH MORE ON EVENT.TARGET
   console.log(selectedClassID);
 
   // fetch the array objects
@@ -64,5 +65,38 @@ const createCharHandler = async (event) => {
   }
 };
 
-// add event listeners to both forms
-charForm.addEventListener("submit", createCharHandler);
+// Define the function to generate an image based on a prompt
+async function generateImage(prompt) {
+  try {
+    const response = await client.images.generate({
+      model: "dall-e-3",
+      prompt: prompt,
+      n: 1,
+      size: "1024x1024",
+    });
+
+    const imageUrl = response.data[0].url;
+
+    // Display the generated image
+    displayImage(imageUrl);
+  } catch (error) {
+    console.error("Error generating image:", error);
+  }
+}
+
+// Function to display the generated image on the page
+function displayImage(imageUrl) {
+  const imageElement = document.getElementById("generated-image");
+  imageElement.src = imageUrl;
+}
+
+// Event listener for the form submission to generate and display the image
+const form = document.getElementById("char-image-form");
+
+form.addEventListener("submit", function (event) {
+  event.preventDefault(); // Prevent the default form submission
+
+  const userInput = document.getElementById("char-image").value;
+
+  generateImage(userInput); // Call the generateImage function with the user input
+});

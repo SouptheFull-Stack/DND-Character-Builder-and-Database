@@ -5,9 +5,14 @@ const exphbs = require("express-handlebars");
 const routes = require("./controllers");
 const helpers = require("./utils/helpers");
 const withAuth = require("./utils/auth");
+const openai = require("openai");
+client = new openai.OpenAI({
+  apiKey: "dXi64eWezDx0qvUvMwMfT3BlbkFJhiZrn6aKcSp82MBRiMbt",
+});
+// sk - maprojectbot -
 
 // add random number generator
-const rn = require('random-number');
+const rn = require("random-number");
 
 const sequelize = require("./config/connection");
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
@@ -39,7 +44,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(routes);
 
 // use the random number package???
-app.get('/roll', (req, res) => {
+app.get("/roll", (req, res) => {
   const sides = parseInt(req.query.sides);
   const result = rn({ min: 1, max: sides, integer: true });
   res.json({ result });

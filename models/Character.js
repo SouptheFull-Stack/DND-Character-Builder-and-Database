@@ -47,6 +47,13 @@ Character.init(
         key: "id",
       },
     },
+    subclass_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "subclass",
+        key: "id",
+      },
+    },
   },
   {
     sequelize,
