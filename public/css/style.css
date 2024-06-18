@@ -56,15 +56,19 @@ main {
 }
 
 .accordion-body {
-  overflow: hidden; /* Prevent unexpected overflow */
+  overflow: hidden;
+  /* Prevent unexpected overflow */
   background-color: var(--dark);
   color: var(--white);
 }
 
 .accordion-card {
-  width: 45%; /* Adjust as needed */
-  min-width: 300px; /* Ensure minimum size */
-  margin: 10px; /* Spacing between cards */
+  width: 45%;
+  /* Adjust as needed */
+  min-width: 300px;
+  /* Ensure minimum size */
+  margin: 10px;
+  /* Spacing between cards */
   display: flex;
   flex-direction: column;
   background-color: var(--dark);
@@ -83,10 +87,15 @@ main {
   display: flex;
   padding: 1em;
   flex-direction: column;
-  height: 100%; /* Ensure card takes full height */
+  height: 100%;
+  /* Ensure card takes full height */
 }
 
 .navbar {
+  background: linear-gradient(0deg,
+  rgb(54, 50, 63) 0%,
+  rgb(0, 0, 0) 100%);
+  
   padding-left: 100px;
   padding-right: 100px;
 }
@@ -95,6 +104,7 @@ main {
   width: 100px;
   height: 100px;
 }
+
 .navbar-nav {
   justify-content: space-between;
 }
@@ -103,6 +113,10 @@ main {
   font-size: 20px;
   width: 100%;
   display: block;
+}
+
+.nav-item {
+  font-family: "ringbearer", Arial, sans-serif;
 }
 
 footer a {
@@ -135,25 +149,37 @@ footer a {
 
 footer {
   /* bottom: 0; */
+  background: linear-gradient(0deg,
+  rgb(54, 50, 63) 0%,
+  rgb(96, 95, 99) 100%);
+
   width: 100%;
 }
+
 .footer-body {
   display: inline-block;
   align-items: center;
 }
 
+.fine-print {
+  font-size: x-small;
+}
+
 form {
   max-width: 600px;
 }
+
 form h2 {
   color: #9d7d06;
   font-size: 45px;
   font-family: "dungeon", Arial, sans-serif;
 }
+
 .container {
   justify-content: center;
   align-items: center;
 }
+
 .login-container,
 .create-container,
 .register-container {
@@ -161,17 +187,20 @@ form h2 {
   border: solid 1px #c8c8c8;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(2px) ;
+  backdrop-filter: blur(2px);
   background-color: var(--transparentWhite);
 }
+
 .form-group {
   margin-bottom: 20px;
 }
+
 label {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 10px;
 }
+
 input[type="email"],
 input[type="password"],
 input[type="text"] {
@@ -180,6 +209,7 @@ input[type="text"] {
   border: 1px solid #ccc;
   border-radius: 5px;
 }
+
 button[type="submit"] {
   font-size: 18px;
   padding: 10px 20px;
@@ -189,22 +219,42 @@ button[type="submit"] {
   color: var(--white);
   cursor: pointer;
 }
+
 .is-hidden {
   display: none;
 }
 
 h4 {
   font-family: "ringbearer", Arial, sans-serif;
-  font-size: 3em;
+  font-size: 2.6em;
   color: var(--accentYellow);
+}
+
+h5 {
+  font-size: 2em;
+  color: var(--accentYellow);
+}
+
+@media only screen and (max-width: 1390px) {
+  h4 {
+    font-size: 2em;
+  }
+}
+
+@media only screen and (max-width: 1660px) {
+
+  .flip-card-back {
+    font-size: 0.7em;
+  }
 }
 
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-card {
   background-color: transparent;
-  width: 650px;
-  height: 700px;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  width: 550px;
+  height: 600px;
+  perspective: 1000px;
+  /* Remove this if you don't want the 3D effect */
 }
 
 /* This container is needed to position the front and back side */
@@ -229,7 +279,8 @@ h4 {
   width: 100%;
   height: 100%;
   border: 1px solid #ffffff;
-  -webkit-backface-visibility: hidden; /* Safari */
+  -webkit-backface-visibility: hidden;
+  /* Safari */
   backface-visibility: hidden;
 }
 
@@ -241,13 +292,33 @@ h4 {
 
 /* Style the back side */
 .flip-card-back {
-  background: linear-gradient(
-    0deg,
-    rgba(128, 161, 255, 1) 0%,
-    rgba(14, 11, 22, 1) 100%
-  );
+  background: linear-gradient(0deg,
+      rgb(50, 51, 110) 0%,
+      rgba(14, 11, 22, 1) 100%);
+
+  font-family: "ringbearer", Arial, sans-serif;
   color: white;
   transform: rotateY(180deg);
+
+  max-height: 100%;
+}
+
+.flip-card-content-start {
+  font-size: 1em;
+  line-height: normal;
+  height: 100%;
+}
+
+.flip-card-content-character {
+  font-size: 0.9em;
+  line-height: normal;
+  height: 100%;
+}
+
+.flip-card-content-roll {
+  font-size: 1em;
+  line-height: normal;
+  height: 100%;
 }
 
 .flip-img {
@@ -256,14 +327,64 @@ h4 {
   object-fit: cover;
 }
 
+.flip-card-btn {
+  appearance: none;
+  background-color: #000000;
+  border: 2px solid #1A1A1A;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 40%;
+  will-change: transform;
+
+  position: relative;
+  bottom: 5%;
+}
+
+.flip-card-btn:disabled {
+  pointer-events: none;
+}
+
+.flip-card-btn:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.flip-card-btn:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
 .homepage-body {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .dice {
   background-color: var(--transparentWhite);
   border-radius: 1em;
   padding: 0.5em;
+}
+
+.dice-img {
+  width: 40%;
+  height: 25%;
 }
 
 .modifier {
@@ -296,7 +417,7 @@ h4 {
   padding: 0.5em;
 }
 
-h5 {
+h6 {
   color: #912630;
   font-family: "ringbearer", Arial, sans-serif;
   font-size: 2em;
