@@ -1,5 +1,76 @@
-<section class="hero">
-    <div class="container">
-        hellooO!!!
+<section class="mw-100 overflow-hidden">
+  <div class="d-flex flex-row justify-content-around w-100">
+    <div class="characterOne-container ms-5">
+      <h3 class="cs-h3-info mx-3 flex-grow-1">{{characterSingle.name}}</h3>
     </div>
+    <div class="characterOne-container mx-3">
+      <h3></h3>
+    </div>
+  </div>
+
+
+
+{{!-- d-flex flex-wrap justify-content-evenly --}}
+  <section class="row my-5 justify-content-evenly">
+    <div class="card col-2 mx-2">
+      <div class="my-3 text-center">
+       <h4 class="cs-charNames">Stats</h4>
+      </div>
+      <div class="sedan-sc-regular stats">
+        <div class="sedan-sc-regular stats d-flex flex-row justify-content-between">
+          <p>Age</p>
+          <p>{{characterSingle.age}} years old</p>
+        </div>
+        <div class="sedan-sc-regular stats d-flex flex-row justify-content-between">
+          <p>Alignment</p>
+          <p>{{characterSingle.alignment.name}}</p>
+        </div>
+        <div class="sedan-sc-regular stats d-flex flex-row justify-content-between"> 
+          <p>Race</p>
+          <p>{{characterSingle.race.name}}</p>
+        </div>
+        <div class="sedan-sc-regular stats d-flex flex-row justify-content-between">
+          <p>Class</p>
+          <p>{{characterSingle.subclass.name}} {{characterSingle.class.name}}</p>
+        </div>
+        <div class="sedan-sc-regular stats d-flex flex-row justify-content-between">
+          <p>Speed</p>
+          <p>{{characterSingle.race.speed}}</p>
+        </div>
+        <div class="sedan-sc-regular stats d-flex flex-row justify-content-between">
+          <p>Stats</p>
+          <p>{{characterSingle.race.stats}}</p>
+        </div>       
+        <div class="sedan-sc-regular stats d-flex flex-row justify-content-between">
+          <p>Languages</p>
+          <p>
+        {{#each characterSingle.race.languages}}
+        {{this}}{{#unless @last}},{{/unless}}
+        {{/each}}
+          </p>
+        </div>
+      </div> 
+    </div>
+
+    <div class="card col-4 mx-2">
+      <div class="my-3 sedan-sc-regular stats p-2">
+        <h4 class="cs-charNames text-center py-2">Your Story...</h4>
+        <p>{{characterSingle.class.description}}</p><br/>
+        <p>{{characterSingle.subclass.description}}</p> 
+      </div>
+    </div>
+
+    <div class="card col-4 mx-2">
+      <div class="my-3 sedan-sc-regular stats p-2">
+        <h4 class="cs-charNames text-center py-2">Your Origins...</h4>
+        <p>{{characterSingle.race.age}}</p>
+        <p>{{characterSingle.race.size}}</p>
+        <p>{{characterSingle.race.extra}}</p>
+        <p>{{characterSingle.race.special_abilities}}</p>       
+      </div>
+    </div>
+  </section>
+  
+
+
 </section>

@@ -46,16 +46,6 @@ Character.belongsTo(Alignment, {
   foreignKey: "alignment_id",
 });
 
-// many to one (character has one alignment, alignments have a lot of characters)
-Alignment.hasMany(Character, {
-  foreignKey: "alignment_id",
-  onDelete: "CASCADE",
-});
-
-Character.belongsTo(Alignment, {
-  foreignKey: "alignment_id",
-});
-
 // subclass to class => one to many
 Class.hasMany(Subclass, {
   foreignKey: "class_id",
@@ -64,6 +54,15 @@ Class.hasMany(Subclass, {
 
 Subclass.belongsTo(Class, {
   foreignKey: "class_id",
+});
+
+Subclass.hasMany(Character, {
+  foreignKey: "subclass_id",
+  onDelete: "CASCADE",
+});
+
+Character.belongsTo(Subclass, {
+  foreignKey: "subclass_id",
 });
 
 module.exports = { User, Character, Class, Race, Subclass, Alignment };
