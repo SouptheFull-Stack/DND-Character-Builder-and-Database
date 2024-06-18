@@ -8,7 +8,7 @@ router.post("/", async (req, res) => {
     res.status(200).json(newAlignment);
   } catch (err) {
     console.error(err);
-    res.status(500).send("Error creating!");
+    res.status(500).send("Error creating alignment!");
   }
 });
 
@@ -19,7 +19,7 @@ router.get("/", async (req, res) => {
     res.status(200).json(allAlignment);
   } catch (err) {
     console.error(err);
-    res.status(500).send("Error retrieving Subclass!");
+    res.status(500).send("Error retrieving alignment!");
   }
 });
 
@@ -30,7 +30,7 @@ router.get("/:id", async (req, res) => {
     res.status(200).json(idAlignment);
   } catch (err) {
     console.error(err);
-    res.status(500).send("Error retrieving Subclass!");
+    res.status(500).send("Error retrieving alignment!");
   }
 });
 
@@ -45,7 +45,7 @@ router.get("/name/:name", async (req, res) => {
     res.status(200).json(nameAlignment);
   } catch (err) {
     console.error(err);
-    res.status(500).send("Error retrieving class!");
+    res.status(500).send("Error retrieving alignment!");
   }
 });
 

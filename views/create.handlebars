@@ -53,3 +53,20 @@
   </div>
 </form>
 <script src="/js/create.js"></script>
+
+{{!-- API IMAGE GENERATION WITH AI --}}
+<form class='mx-auto create-container' data-userid="{{userId}}" id="char-image-form">
+  <h2 class='sedan-sc-regular centre'>Make your portrait</h2>
+    <div class='form-group m-3'>
+      <label for='char-image'></label>
+      <input type='text' class='form-control' id='char-image' placeholder="Enter a prompt for your character's appearance"/>
+    </div>
+      <button type='submit' class='btn btn-secondary form-control'>Generate</button>
+    </div>
+</form>
+
+<section >
+  <div id="generated-image">
+    <img />
+  </div>
+</section>

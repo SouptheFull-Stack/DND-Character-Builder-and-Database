@@ -14,6 +14,7 @@ router.get("/", async (req, res) => {
     res.render("homepage", {
       loggedIn: req.session.logged_in,
       userId: req.session.user_id,
+      isHomePage: true,
     });
   } catch (err) {
     res.status(500).json(err);
@@ -33,7 +34,12 @@ router.get("/login", async (req, res) => {
 router.get("/characters", withAuth, async (req, res) => {
   // get all the characters that belong to user_id
   const userChars = await Character.findAll({
-    include: [{ model: Race }, { model: Class }, { model: Alignment }],
+    include: [
+      { model: Race },
+      { model: Class },
+      { model: Subclass },
+      { model: Alignment },
+    ],
     where: { user_id: req.session.user_id },
   });
 
@@ -98,8 +104,8 @@ router.get("/characters/create", withAuth, async (req, res) => {
     );
     res.render("create", {
       classses,
-      alignments,
       races,
+      alignments,
       loggedIn: req.session.logged_in,
       userId: req.session.user_id,
     });

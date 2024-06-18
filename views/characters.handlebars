@@ -1,49 +1,48 @@
-        {{!-- {{#each characters as |character|}}
-        {{!-- {{#each characters as |character|}}
-          <li>Name: {{name}} Age: {{age}} Race: {{race.name}} Class: {{class.name}}</li><a href=""><button class="btn">More Info</button></a>
-        {{/each}} --}}
-
-<h1 class="text-center py-5">Welcome, {{userName}}!</h1>
- <a href="/characters/create"><button class="btn btn-success position-absolute top-20 start-50 translate-middle">+ Create New Character</button></a>
-<section class="container d-flex flex-wrap">
+    <div class="container charactersMain-container">
+      {{!-- d-flex flex-column justify-content-center --}}
+      <h1 class="text-center py-5 cs-h1">Welcome, {{userName}}!</h1>
+      <a href="/characters/create" class="d-flex justify-content-center sedan-sc-regular fs-5"><button class="btn btn-success">Create  New  Character</button></a>
+    </div>
+    
+<section class="d-flex flex-wrap justify-content-evenly my-5">
         {{#each characters}}
         <div class="card accordion-card">
             <div class="card-body my-3">
-                <h4 class="text-center charNames">{{name}}</h4>
+                <a href="/characters/characterInfo/{{name}}" class="nav-link"><h4 id="charOneLinks" class="text-center cs-charNames">{{name}}</h4></a>
                 <div class="accordion" id="accordionExample{{@index}}">
                     <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingOne{{@index}}">
+                        <h2 class="accordion-header cs-charInfo" id="headingOne{{@index}}">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne{{@index}}" aria-expanded="true" aria-controls="collapseOne{{@index}}">
                                 Alignment: {{alignment.name}}
                             </button>
                         </h2>
                         <div id="collapseOne{{@index}}" class="accordion-collapse collapse show" aria-labelledby="headingOne{{@index}}" data-bs-parent="#accordionExample{{@index}}">
-                            <div class="accordion-body">
+                            <div class="accordion-body sedan-sc-regular">
                                 {{alignment.description}}
                             </div>
                         </div>
                     </div>
                     <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingTwo{{@index}}">
+                        <h2 class="accordion-header cs-charInfo" id="headingTwo{{@index}}">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo{{@index}}" aria-expanded="false" aria-controls="collapseTwo{{@index}}">
                                 Race: {{race.name}}
                             </button>
                         </h2>
                         <div id="collapseTwo{{@index}}" class="accordion-collapse collapse" aria-labelledby="headingTwo{{@index}}" data-bs-parent="#accordionExample{{@index}}">
-                            <div class="accordion-body">
-                                {{race.stats}}
+                            <div class="accordion-body sedan-sc-regular">
+                               You can fluently read, write, and speak in
+                                {{race.languages.[0]}} and {{race.languages.[1]}}.
                             </div>
                         </div>
                     </div>
                     <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingThree{{@index}}">
+                        <h2 class="accordion-header cs-charInfo" id="headingThree{{@index}}">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree{{@index}}" aria-expanded="false" aria-controls="collapseThree{{@index}}">
-                                Class: {{subclass.name}}{{class.name}}
+                                Class: {{subclass.name}}  {{class.name}}
                             </button>
                         </h2>
                         <div id="collapseThree{{@index}}" class="accordion-collapse collapse" aria-labelledby="headingThree{{@index}}" data-bs-parent="#accordionExample{{@index}}">
-                            <div class="accordion-body">
-                                {{class.description}} <br/>
+                            <div class="accordion-body sedan-sc-regular">
                                 {{subclass.description}}
                             </div>
                         </div>
@@ -53,57 +52,5 @@
         </div>
         {{/each}}
     </section>
-
-
-{{!-- <div class="container d-flex my-5 w-60 h-60">
-{{#each characters as |character|}}
-  <div class="accordion d-flex flex-row" id="accordionPanelsStayOpenExample">
-    <div class="card mx-2 w-80 h-80">
-    <h4 class="text-center charNames">{{name}}</h4>
-      <div class="accordion-item" id="headingOne{{index}}">
-        <h2 class="accordion-header">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-        Age: {{age}}
-      </button>
-    </h2>
-    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
-      <div class="accordion-body">
-        {{race.age}}
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-        Race: {{race.name}}
-      </button>
-    </h2>
-    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
-      <div class="accordion-body">
-         INSERT RACE DETAILS HERE DEPENDING ON CHARACTER
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-        Class: {{class.name}}
-      </button>
-    </h2>
-    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
-      <div class="accordion-body">
-        "Creation", "Eloquence", "Glamour", "Lore", "Spirits", "Swords", "Valor", "Whispers"
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-{{/each}}
-</div> --}}
-
-
-    {{!-- <div class="Information">
-      <button href="../views/info.handlebars">More Info</button>
-    </div>  --}}
 
 

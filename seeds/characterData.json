@@ -5,7 +5,8 @@
     "alignment_id": 3,
     "user_id": 1,
     "race_id": 1,
-    "class_id": 6
+    "class_id": 6,
+    "subclass_id": 3
   },
   {
     "name": "Wisteria",
@@ -13,7 +14,8 @@
     "alignment_id": 5,
     "user_id": 1,
     "race_id": 1,
-    "class_id": 4
+    "class_id": 4,
+    "subclass_id": 5
   },
   {
     "name": "Misty",
@@ -21,7 +23,8 @@
     "alignment_id": 2,
     "user_id": 1,
     "race_id": 1,
-    "class_id": 9
+    "class_id": 9,
+    "subclass_id": 1
   },
   {
     "name": "E",
@@ -29,7 +32,8 @@
     "alignment_id": 7,
     "user_id": 1,
     "race_id": 2,
-    "class_id": 2
+    "class_id": 2,
+    "subclass_id": 9
   },
   {
     "name": "Ash",
@@ -37,7 +41,8 @@
     "alignment_id": 1,
     "user_id": 2,
     "race_id": 1,
-    "class_id": 1
+    "class_id": 1,
+    "subclass_id": 7
   },
   {
     "name": "Zeltara",
@@ -45,7 +50,8 @@
     "alignment_id": 4,
     "user_id": 2,
     "race_id": 2,
-    "class_id": 10
+    "class_id": 10,
+    "subclass_id": 4
   },
   {
     "name": "Dumbo",
@@ -53,7 +59,8 @@
     "alignment_id": 9,
     "user_id": 2,
     "race_id": 1,
-    "class_id": 4
+    "class_id": 4,
+    "subclass_id": 4
   },
   {
     "name": "Blessing",
@@ -61,7 +68,8 @@
     "alignment_id": 7,
     "user_id": 3,
     "race_id": 1,
-    "class_id": 3
+    "class_id": 3,
+    "subclass_id": 3
   },
   {
     "name": "F",
@@ -69,6 +77,7 @@
     "alignment_id": 6,
     "user_id": 3,
     "race_id": 1,
-    "class_id": 8
+    "class_id": 8,
+    "subclass_id": 6
   }
 ]
