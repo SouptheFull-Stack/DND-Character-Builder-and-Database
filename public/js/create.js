@@ -65,38 +65,4 @@ const createCharHandler = async (event) => {
   }
 };
 
-// Define the function to generate an image based on a prompt
-async function generateImage(prompt) {
-  try {
-    const response = await client.images.generate({
-      model: "dall-e-3",
-      prompt: prompt,
-      n: 1,
-      size: "1024x1024",
-    });
-
-    const imageUrl = response.data[0].url;
-
-    // Display the generated image
-    displayImage(imageUrl);
-  } catch (error) {
-    console.error("Error generating image:", error);
-  }
-}
-
-// Function to display the generated image on the page
-function displayImage(imageUrl) {
-  const imageElement = document.getElementById("generated-image");
-  imageElement.src = imageUrl;
-}
-
-// Event listener for the form submission to generate and display the image
-const form = document.getElementById("char-image-form");
-
-form.addEventListener("submit", function (event) {
-  event.preventDefault(); // Prevent the default form submission
-
-  const userInput = document.getElementById("char-image").value;
-
-  generateImage(userInput); // Call the generateImage function with the user input
-});
+charForm.addEventListener("submit", createCharHandler);
