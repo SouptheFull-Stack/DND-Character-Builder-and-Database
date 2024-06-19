@@ -245,13 +245,6 @@ h5 {
   }
 }
 
-@media only screen and (max-width: 1660px) {
-
-  .flip-card-back {
-    font-size: 0.7em;
-  }
-}
-
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-card {
   background-color: transparent;
@@ -304,7 +297,7 @@ h5 {
   color: white;
   transform: rotateY(180deg);
 
-  max-height: 100%;
+  /* max-height: 100%; */
 }
 
 .flip-card-content-start {
@@ -331,13 +324,39 @@ h5 {
   object-fit: cover;
 }
 
+@media only screen and (max-width: 1660px) {
+
+  .flip-card-back {
+    font-size: 0.8em;
+  }
+}
+
+@media only screen and (max-width: 860px) {
+
+  .flip-card {
+    height: 750px;
+  }
+
+}
+
+@media only screen and (max-width: 760px) {
+
+  .flip-card-back {
+    height: auto;
+  }
+
+  .dice-img {
+    display: none;
+  }
+}
+
 .flip-card-btn {
   appearance: none;
   background-color: #000000;
   border: 2px solid #1A1A1A;
   border-radius: 15px;
   box-sizing: border-box;
-  color: #FFFFFF;
+  color: #797474;
   cursor: pointer;
   display: inline-block;
   font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
