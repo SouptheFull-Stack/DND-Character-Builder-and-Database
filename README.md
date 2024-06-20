@@ -1,8 +1,5 @@
 # DND-Character-Builder-and-Database
 
-Home logo and icons designed by Freepik.
-Art depictions provided by https://mythjourneys.com/ & https://www.artstation.com/billcreative.
-
 ## Table of Contents
 
 - [Description](#Description)
@@ -31,9 +28,11 @@ GIVEN a Website of DnD
 WHEN I click on create a new character
 THEN I will need to create and account or sign in if i already  have an existing
 WHEN I view form to create a new character 
-THEN I fill it with the data that i would like 
+THEN I fill it with the data that i would like and save the character
 WHEN I click on create  
 THEN I see all the characters cerated by the user
+WHEN I click on the name of the character 
+THEN I will see the description of the character with all of their attributes
 WHEN I click on Roll a dice  
 THEN I see a different format where i can add as many dice as i want and the summary of the previous rolls
 ```
@@ -51,6 +50,10 @@ Character from User
 
 Roll a dice!!
 ![app_Dice](/public/images/Dice.png "Dice")
+
+Detail description of the character
+![app_Description](/public/images/Description.png "Description")
+
 ## Installation
 
 To get started with the project, you'll need to have Node.js and npm installed on your computer. Follow these steps to set up the project locally:
